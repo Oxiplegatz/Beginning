@@ -104,6 +104,5 @@ animal_names_list = [dog_bucky.species, cat_liz.species, giraffe_brian.species, 
 visitor_one = Visitor('Alexei', 37, 'Male', 60000)
 visitor_two = Visitor('Sheila', 21, 'Female', 140000)
 
-
 print(visitor_two)
 visitor_two.adopt_animal()
