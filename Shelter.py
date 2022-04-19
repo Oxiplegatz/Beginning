@@ -92,14 +92,16 @@ chameleon_shadow = Animal('chameleon', 'carpet chameleon', 'Shadow', 3, 'medium'
 eagle_stripes = Animal('eagle', 'bald eagle', 'Stripes', 6, 'large', 'neutral')
 hamster_buncho = Animal('hamster', 'domestic hamster', 'Buncho', 2, 'small', 'friendly')
 fish_ponyo = Animal('aquarium fish', 'guppies', 'Ponyo', 1, 'small', 'neutral')
+snake_snakey = Animal('snake', 'cobra', 'Ssssisy', 12, 'medium', 'aggressive')
+monkey_bananaman = Animal('monkey', 'chimpanzee', 'Bananaman', 6, 'medium', 'friendly')
 
 animals_dict = {dog_bucky.species: dog_bucky, cat_liz.species: cat_liz, giraffe_brian.species: giraffe_brian,
                 croc_jumbo.species: croc_jumbo, chameleon_shadow.species: chameleon_shadow,
                 eagle_stripes.species: eagle_stripes, hamster_buncho.species: hamster_buncho,
-                fish_ponyo.species: fish_ponyo}
+                fish_ponyo.species: fish_ponyo, snake_snakey.species: snake_snakey, monkey_bananaman.species: monkey_bananaman}
 
 animal_names_list = [dog_bucky.species, cat_liz.species, giraffe_brian.species, croc_jumbo.species,
-                     chameleon_shadow.species, eagle_stripes.species, hamster_buncho.species, fish_ponyo.species]
+                     chameleon_shadow.species, eagle_stripes.species, hamster_buncho.species, fish_ponyo.species, snake_snakey.species, monkey_bananaman.species]
 
 visitor_one = Visitor('Alexei', 37, 'Male', 60000)
 visitor_two = Visitor('Sheila', 21, 'Female', 140000)
