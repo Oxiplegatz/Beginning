@@ -73,7 +73,7 @@ class Visitor:
             animal_choice = input('We don\'t seem to have this animal. It\'s an animal, right? Please choose from the ones we have.\n')
         choice = input('I see you have chosen to adopt a {animal}. Would you like to proceed? Yes/No \n'.format(animal=animal_choice))
         if choice == 'no' or choice == 'No':
-            new_choice = input('I\'m sorry to hear that. Maybe you would like to adopt someone else? ')
+            new_choice = input('I\'m sorry to hear that. Maybe you would like to adopt someone else?\n')
             if new_choice == 'yes' or new_choice == 'Yes':
                 animal_species_list.pop(animal_species_list.index(animal_choice))
                 animal_choice = input('We have these animals: ' + ', '.join(animal_species_list) + '\nWho would you like to adopt?\n')
@@ -193,3 +193,6 @@ print('''
 ''')
 
 create_visitor()
+
+print('')
+finish = input('Press "Enter" to exit.')
