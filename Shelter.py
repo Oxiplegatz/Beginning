@@ -1,3 +1,6 @@
+import random
+
+
 class Animal:
 
     def __init__(self, species, breed, name, age, size, friendliness, sponsor_cost):
@@ -10,8 +13,10 @@ class Animal:
         self.sponsor_cost = sponsor_cost
 
     def __repr__(self):
-        description = 'Here is a {species}, a {breed} to be exact. It is of {size} size. Its name is {name}, and it is {age} years old.'.format(
-            species=self.species, breed=self.breed, name=self.name, size=self.size, age=self.age)
+        description = 'Here is a {species}, a {breed} to be exact. It is of {size} size.' \
+                      ' Its name is {name}, and it is {age} years old.'.format(species=self.species, breed=self.breed,
+                                                                               name=self.name, size=self.size,
+                                                                               age=self.age)
         if self.friendliness == 'friendly':
             description += ' {name} is a friendly animal.'.format(name=self.name)
         elif self.friendliness == 'neutral':
@@ -22,130 +27,183 @@ class Animal:
 
     def can_adopt(self):
         if self.friendliness == 'friendly' or self.friendliness == 'neutral':
-            animal_species_list.pop(animal_species_list.index(self.species))
-            print(
-                self.__repr__() + '\nIt is now yours. Congratulations!\nWe have these animals left: ' + ', '.join(
-                    animal_species_list) + '. Maybe you will recommend someone to your friends!'
-            )
+            the_shelter.remove_animal(self)
+            current_animals = the_shelter.set_current_animals()
+            print(self.__repr__() + '\nIt is now yours. Congratulations!\n\nWe have these animals'
+                                    ' up for adoption: ' + ', '.join(
+                current_animals) + '. Maybe you will recommend someone to your friends!')
         else:
+            current_animals = the_shelter.set_current_animals()
+            current_animals.remove(self.species)
+            alternative = input('You want to adopt {name}, the {species}. This is a wild animal,'
+                                ' it\'s very aggressive. Unfortunately you cannot adopt it.'
+                                ' Would you like to check out other animals? Yes/No\n'.format(name=self.name,
+                                                                                              species=self.species))
+            while alternative.lower() not in ['yes', 'no']:
+                alternative = input('Please answer "yes" or "no".\n')
+            if alternative.lower() == 'no':
+                print('We are sorry to hear that, and we wish you all the best.')
+                return
             alternative = input(
-                'You chose to adopt {name}, the {species}. This is a wild animal, it\'s very aggressive. Unfortunately you cannot adopt it. Would you like to check out other animals? Yes/No \n'.format(
-                    name=self.name, species=self.species)
-            )
-            if alternative == 'no' or alternative == 'No':
-                print('We are sorry to hear that and we wish you all the best.')
+                'Great! We have these animals: ' + ', '.join(current_animals)
+                + '. Who would you like to adopt? \n')
+            current_animals = the_shelter.set_current_animals()
+            if alternative in current_animals:
+                animals[current_animals.index(alternative)].can_adopt()
             else:
-                animal_species_list.pop(animal_species_list.index(self.species))
-                alternative = input(
-                    'Great! We have these animals: ' + ', '.join(animal_species_list) + '. Who would you like to adopt? \n'
-                )
-                if alternative in animal_species_list:
-                    return animals_dict[alternative].can_adopt()
-                else:
-                    print('Unfortunately we don\'t have this animal.')
+                print('Unfortunately we don\'t have this animal.')
+
+
+class Shelter:
+
+    def __init__(self, animals_list):
+        self.animals_list = animals_list
+
+    def __repr__(self):
+        random_animals = []
+        for i in range(3):
+            random_animals.append(self.set_current_animals()[random.randint(0, (len(self.animals_list) - 1))])
+        return 'This is an animal shelter. We have all kind of animals' \
+               ' you can adopt or sponsor. Here are some of the animals we currently' \
+               ' have: ' + ', '.join(random_animals) + '.\n\nPlease tell us about yourself.'
+
+    def get_animals(self):
+        return self.animals_list
+
+    def set_current_animals(self):
+        current_animals = [animal.species for animal in self.animals_list]
+        return current_animals
+
+    def remove_animal(self, animal):
+        self.animals_list.remove(animal)
+
+    def add_animal(self, animal):
+        if animal is Animal:
+            if animal not in self.animals_list:
+                self.animals_list.append(animal)
+                print('Successfully added {animal} to the shelter.'.format(animal=animal.species))
+                return
+            print('We already have {name}, the {animal} in our shelter.'.format(animal=animal.species,
+                                                                                name=animal.name))
+        else:
+            print('Error. We accept only animals.')
 
 
 class Visitor:
 
-    def __init__(self, name, age, sex, income, account_balance):
+    def __init__(self, name, age, sex, account_balance):
         self.name = name
         self.age = age
         self.sex = sex
-        self.income = income
-        if income >= 100000:
-            self.income_level = 'high'
-        elif income >= 50000:
-            self.income_level = 'medium'
-        else:
-            self.income_level = 'low'
         self.account_balance = account_balance
 
     def __repr__(self):
-        if self.sex == 'Male' or self.sex == 'male':
-            return 'Our new visitor is {name}. He is {age} years old. Greetings!\n'.format(name=self.name, age=self.age)
+        if self.sex.lower() == 'male':
+            return 'Our new visitor is {name}. He is {age} years old.' \
+                   ' Greetings!\n'.format(name=self.name, age=self.age)
         else:
-            return 'Our new visitor is {name}. She is {age} years old. Greetings!\n'.format(name=self.name, age=self.age)
+            return 'Our new visitor is {name}. She is {age} years old.' \
+                   ' Greetings!\n'.format(name=self.name, age=self.age)
 
     def adopt_animal(self):
-        animal_choice = input(
-            'Please come in. We have many animals to adopt. Which one do you like: ' + ', '.join(animal_species_list) + '?\n')
-        while animal_choice not in animal_species_list:
-            animal_choice = input('We don\'t seem to have this animal. It\'s an animal, right? Please choose from the ones we have.\n')
-        choice = input('I see you have chosen to adopt a {animal}. Would you like to proceed? Yes/No \n'.format(animal=animal_choice))
-        if choice == 'no' or choice == 'No':
+        animals_list = the_shelter.get_animals()
+        current_animals = the_shelter.set_current_animals()
+        animal_choice = input('Please come in. We have many animals to adopt.'
+                              ' Which one do you like: ' + ', '.join(current_animals) + '?\n')
+        while animal_choice not in current_animals:
+            animal_choice = input('We don\'t seem to have this animal.'
+                                  ' It\'s an animal, right? Please choose from the ones we have.\n')
+        choice = input('I see you have chosen to adopt a {animal}.'
+                       ' Would you like to proceed? Yes/No\n'.format(animal=animal_choice))
+        while choice.lower() not in ['yes', 'no']:
+            choice = input('Please answer "yes" or "no".\n')
+        if choice.lower() == 'no':
             new_choice = input('I\'m sorry to hear that. Maybe you would like to adopt someone else?\n')
-            if new_choice == 'yes' or new_choice == 'Yes':
-                animal_species_list.pop(animal_species_list.index(animal_choice))
-                animal_choice = input('We have these animals: ' + ', '.join(animal_species_list) + '\nWho would you like to adopt?\n')
-                while animal_choice not in animal_species_list:
-                    animal_choice = input('We don\'t seem to have this animal. It\'s an animal, right? Please choose from the ones we have.\n')
-                animals_dict[animal_choice].can_adopt()
-            elif new_choice == 'no' or new_choice == 'No':
-                print('Okay. Good luck!')
-        elif choice == 'yes' or choice == 'Yes':
-            animals_dict[animal_choice].can_adopt()
-        else:
-            print('Error.')
+            if new_choice.lower() == 'yes':
+                current_animals.remove(animal_choice)
+                animal_choice = input('We have these animals: ' + ', '.join(current_animals) +
+                                      '\nWho would you like to adopt?\n')
+                while animal_choice not in current_animals:
+                    animal_choice = input('We don\'t seem to have this animal. It\'s an animal, right?'
+                                          ' Please choose from the ones we have.\n')
+                current_animals = the_shelter.set_current_animals()
+                animals_list[current_animals.index(animal_choice)].can_adopt()
+            elif new_choice.lower() == 'no':
+                print('Okay. Good luck then!')
+            else:
+                print('Error')
+            return
+        if choice.lower() == 'yes':
+            animals_list[current_animals.index(animal_choice)].can_adopt()
+        return
 
     def deduct_money(self, amount):
-        self.account_balance = self.account_balance - amount
+        self.account_balance -= amount
 
     def become_sponsor(self):
-        animal_choice = input('Please come in. I\'m glad to hear that you want to sponsor one of our animals. I see you have {income} income, that might be important. You can choose who you want to sponsor:\n'.format(name=self.name, income=self.income_level) + ', '.join(animal_species_list) + '\n')
-        while animal_choice not in animal_species_list:
-            animal_choice = input('We don\'t seem to have this animal. It\'s an animal, right? Please choose from the ones we have.\n')
-        animal_index = animal_species_list.index(animal_choice)
-        deduct_amount = animals_dict[animal_choice].sponsor_cost
-        choice = input('I see you have chosen to sponsor {animal}. It costs {sum} per month. Would you like to proceed? Yes/No \n'.format(animal=animal_choice, sum=deduct_amount))
-        while choice not in ['no', 'No', 'yes', 'Yes']:
-            choice = input('Please answer yes or no. ')
-        if choice == 'no' or choice == 'No':
+        animals_list = the_shelter.get_animals()
+        current_animals = the_shelter.set_current_animals()
+        animal_choice = input('Please come in. I\'m happy to hear that you want'
+                              ' to sponsor one of our animals. You can choose who'
+                              ' you want to sponsor:\n'.format(name=self.name) +
+                              ', '.join(current_animals) + '\n')
+        while animal_choice not in current_animals:
+            animal_choice = input('We don\'t seem to have this animal. It\'s an animal, right?'
+                                  ' Please choose from the ones we have.\n')
+        deduct_amount = animals_list[current_animals.index(animal_choice)].sponsor_cost
+        animal_name = animals_list[current_animals.index(animal_choice)].name
+        choice = input('I see you have chosen to sponsor {animal}. It costs {sum} dollars per month.'
+                       ' Would you like to proceed? Yes/No \n'.format(animal=animal_choice, sum=deduct_amount))
+        while choice.lower() not in ['yes', 'no']:
+            choice = input('Please answer yes or no.\n')
+        if choice.lower() == 'no':
             print('I\'m sorry to hear that. Good luck!')
-        elif choice == 'yes' or choice == 'Yes':
+        elif choice.lower() == 'yes':
             if deduct_amount <= self.account_balance:
                 self.deduct_money(deduct_amount)
-                sponsors_list.append(self.name + ' is a sponsor of ' + animal_names_list[animal_index] + ', the ' + animal_choice + '.')
-                print('Great! You have become a sponsor of {name}, the {animal}. We have deducted {sum} from your account.'.format(animal=animal_choice, sum=deduct_amount, name=animal_names_list[animal_index]))
+                sponsors_list.append(animal_name + ', the ' + animal_choice + ' is sposored by ' + self.name + '.')
+                print('Great! You have become a sponsor of {name}, the {animal}.'
+                      ' We have deducted {sum} dollars from your account.'.format(
+                        animal=animal_choice, sum=deduct_amount, name=animal_name))
+                print('You have been added to the list of our sponsors!\n\nSponsors List\n' + '\n'.join(sponsors_list))
             else:
-                print('You don\'t have enough money to become a sponsor of ' + animal_names_list[animal_index] + ', the ' + animal_choice + '.')
+                print('You don\'t have enough money to become a sponsor of'
+                      ' ' + animal_name + ', the ' + animal_choice + '.')
 
 
 def create_visitor():
-
-    first_input = input('What\'s your name?\n')
-    if first_input.isalpha():
-        name = first_input
+    input_one = input('What is your name?\n')
+    if input_one.isalpha():
+        name = input_one
     else:
         name = 'John Doe'
         print('You did not provide a name, so let us call you John Doe.')
 
-    second_input = 'How old are you?\n'
-    age = check_if_number(second_input)
+    input_two = 'How old are you?\n'
+    age = check_if_number(input_two)
 
-    third_input = input('Are you male or female?\n')
-    while third_input not in ['Male', 'Female', 'male', 'female']:
-        third_input = input('Please choose Male or Female:\n')
-    sex = third_input
+    input_three = input('Are you male or female?\n')
+    while input_three.lower() not in ['male', 'female']:
+        input_three = input('Please choose Male or Female:\n')
+    sex = input_three
 
-    fourth_input = 'What\'s your annual income in USD?\n'
-    income = check_if_number(fourth_input)
+    input_four = 'How much USD are you ready to donate?\n'
+    balance = check_if_number(input_four)
 
-    fifth_input = 'How much are you ready to spend in our shelter?\n'
-    balance = check_if_number(fifth_input)
-
-    return multichoice(Visitor(name, age, sex, income, balance))
+    return choose_action(Visitor(name, age, sex, balance))
 
 
-def multichoice(visitor):
-    choice = input('Hello {name} and welcome to our shelter! Here you can adopt someone or become a sponsor for one of our wonderful animals. What would you like to do?\n'.format(name=visitor.name))
-    while choice not in ['sponsor', 'adopt', 'Sponsor', 'Adopt']:
+def choose_action(visitor):
+    choice = input('Hello {name} and welcome to our shelter! Here you can adopt someone'
+                   ' or become a sponsor for one of our wonderful animals. What would you'
+                   ' like to do?\n'.format(name=visitor.name))
+    while choice.lower() not in ['sponsor', 'adopt']:
         choice = input('Please answer "adopt" or "sponsor"\n')
     if choice == 'adopt' or choice == 'Adopt':
         print(visitor)
-        visitor.adopt_animal()
-    else:
-        print(visitor)
-        visitor.become_sponsor()
+        return visitor.adopt_animal()
+    print(visitor)
+    return visitor.become_sponsor()
 
 
 def check_if_number(user_input):
@@ -159,28 +217,21 @@ def check_if_number(user_input):
             return number
 
 
-dog_bucky = Animal('dog', 'chihuahua', 'Bucky', 6, 'small', 'neutral', 500)
-cat_liz = Animal('cat', 'tabby', 'Liz', 2, 'small', 'friendly', 300)
-giraffe_brian = Animal('giraffe', 'northern giraffe', 'Tower', 10, 'large', 'aggressive', 6000)
-croc_jumbo = Animal('crocodile', 'cmerican alligator', 'Jumbo', 4, 'large', 'aggressive', 2000)
-chameleon_shadow = Animal('chameleon', 'carpet chameleon', 'Shadow', 3, 'medium', 'neutral', 1000)
-eagle_stripes = Animal('eagle', 'bald eagle', 'Stripes', 6, 'large', 'neutral', 1200)
+dog_bucky = Animal('dog', 'chihuahua', 'Bucky', 6, 'small', 'neutral', 200)
+cat_liz = Animal('cat', 'tabby', 'Liz', 2, 'small', 'friendly', 100)
+giraffe_brian = Animal('giraffe', 'northern giraffe', 'Tower', 10, 'large', 'aggressive', 600)
+croc_jumbo = Animal('crocodile', 'cmerican alligator', 'Jumbo', 4, 'large', 'aggressive', 200)
+chameleon_shadow = Animal('chameleon', 'carpet chameleon', 'Shadow', 3, 'medium', 'neutral', 100)
+eagle_stripes = Animal('eagle', 'bald eagle', 'Stripes', 6, 'large', 'neutral', 300)
 hamster_buncho = Animal('hamster', 'domestic hamster', 'Buncho', 2, 'small', 'friendly', 200)
 fish_ponyo = Animal('aquarium fish', 'guppies', 'Ponyo', 1, 'small', 'neutral', 100)
-snake_snakey = Animal('snake', 'cobra', 'Ssssisy', 12, 'medium', 'aggressive', 800)
-monkey_bananas = Animal('monkey', 'chimpanzee', 'Bananas', 6, 'medium', 'friendly', 2400)
+snake_snakey = Animal('snake', 'cobra', 'Ssssissy', 12, 'medium', 'aggressive', 90)
+monkey_chip = Animal('monkey', 'chimpanzee', 'Chip', 6, 'medium', 'friendly', 400)
 
-animals_dict = {dog_bucky.species: dog_bucky, cat_liz.species: cat_liz, giraffe_brian.species: giraffe_brian,
-                croc_jumbo.species: croc_jumbo, chameleon_shadow.species: chameleon_shadow,
-                eagle_stripes.species: eagle_stripes, hamster_buncho.species: hamster_buncho,
-                fish_ponyo.species: fish_ponyo, snake_snakey.species: snake_snakey, monkey_bananas.species: monkey_bananas}
+animals = [dog_bucky, cat_liz, giraffe_brian, croc_jumbo, chameleon_shadow,
+           eagle_stripes, hamster_buncho, fish_ponyo, snake_snakey, monkey_chip]
 
-animal_species_list = [dog_bucky.species, cat_liz.species, giraffe_brian.species, croc_jumbo.species,
-                       chameleon_shadow.species, eagle_stripes.species, hamster_buncho.species, fish_ponyo.species, snake_snakey.species, monkey_bananas.species]
-
-animal_names_list = [value.name for value in animals_dict.values()]
-
-animal_sponsorship_list = [value.sponsor_cost for value in animals_dict.values()]
+the_shelter = Shelter(animals)
 
 sponsors_list = []
 
@@ -192,7 +243,9 @@ print('''
 /____/_/ /_/\___/_/\__/\___/_/  
 ''')
 
+print(the_shelter)
+
 create_visitor()
 
 print('')
-finish = input('Press "Enter" to exit.')
+exit_variable = input('Press Enter to close the program.')
