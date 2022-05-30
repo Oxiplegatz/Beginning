@@ -1,23 +1,23 @@
 from GraphSearch import bfs, dfs
-from VcMetro import vc_metro
-from VcLandmarks import vc_landmarks
+from MosMetroGraph import moscow_subway
+from MosLandmarks import mos_landmarks
 from LandmarkChoices import landmark_choices
 
 landmark_string = '\n'.join(f'{letter}: {landmark}' for letter, landmark in landmark_choices.items())
 
-stations_under_construction = ['Richmond-Brighouse', 'Olympic Village', 'Columbia']
+stations_under_construction = ['Fili']
 
 
-def skyroute():
+def route_planner():
     greet()
     new_route()
     goodbye()
 
 
 def get_active_stations():
-    updated_metro = vc_metro
+    updated_metro = moscow_subway
     for station_under_construction in stations_under_construction:
-        for current_station, neighboring_stations in vc_metro.items():
+        for current_station, neighboring_stations in moscow_subway.items():
             if current_station != station_under_construction:
                 updated_metro[current_station] -= set(stations_under_construction)
             else:
@@ -26,14 +26,35 @@ def get_active_stations():
 
 
 def greet():
-    print('Hi there and welcome to SkyRoute!')
-    print(f'We\'ll help you find the shortest route between the following Vancouver landmarks:\n{landmark_string}')
+    print('Hi there and welcome to Route Planner!')
+    print(f'We\'ll help you find the shortest route between the following Moscow landmarks:\n{landmark_string}')
+
+
+def get_start():
+    start_point_letter = input('Where are you coming from? Type in the corresponding letter:\n')
+
+    if start_point_letter in landmark_choices:
+        start_point = landmark_choices[start_point_letter]
+        return start_point
+    print('Sorry, that\'s not a landmark we have data on. Let\'s try this again...')
+    return get_start()
+
+
+def get_end():
+    end_point_letter = input('Ok, where are you headed? Type in the corresponding letter:\n')
+
+    if end_point_letter in landmark_choices:
+        end_point = landmark_choices[end_point_letter]
+        return end_point
+    print('Sorry, that\'s not a landmark we have data on. Let\'s try this again...')
+    return get_end()
 
 
 def set_start_and_end(start_point, end_point):
     if start_point is not None:
         change_point = input(
-            'What would you like to change? You can enter "o" for "origin", "d" for "destination", or "b" for "both"":\n')
+            'What would you like to change? You can enter "o" for "origin",'
+            ' "d" for "destination", or "b" for "both"":\n')
         if change_point == 'b':
             start_point = get_start()
             end_point = get_end()
@@ -50,28 +71,6 @@ def set_start_and_end(start_point, end_point):
         end_point = get_end()
 
     return start_point, end_point
-
-
-def get_start():
-    start_point_letter = input('Where are you coming from? Type in the corresponding letter:\n')
-
-    if start_point_letter in landmark_choices:
-        start_point = landmark_choices[start_point_letter]
-        return start_point
-    else:
-        print('Sorry, that\'s not a landmark we have data on. Let\'s try this again...')
-        get_start()
-
-
-def get_end():
-    end_point_letter = input('Ok, where are you headed? Type in the corresponding letter:\n')
-
-    if end_point_letter in landmark_choices:
-        end_point = landmark_choices[end_point_letter]
-        return end_point
-    else:
-        print('Sorry, that\'s not a landmark we have data on. Let\'s try this again...')
-        get_end()
 
 
 def new_route(start_point=None, end_point=None):
@@ -97,13 +96,13 @@ def show_landmarks():
 
 
 def get_route(start_point, end_point):
-    start_stations = vc_landmarks[start_point]
-    end_stations = vc_landmarks[end_point]
+    start_stations = mos_landmarks[start_point]
+    end_stations = mos_landmarks[end_point]
     routes = []
 
     for start_station in start_stations:
         for end_station in end_stations:
-            metro_system = get_active_stations() if stations_under_construction else vc_metro
+            metro_system = get_active_stations() if stations_under_construction else moscow_subway
             if stations_under_construction:
                 possible_route = dfs(metro_system, start_station, end_station)
                 if not possible_route:
@@ -118,7 +117,7 @@ def get_route(start_point, end_point):
 
 
 def goodbye():
-    print('Thanks for using SkyRoute!')
+    print('Thanks for using Route Planner!')
 
 
-skyroute()
+route_planner()
