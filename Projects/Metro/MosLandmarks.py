@@ -12,7 +12,7 @@ mos_landmarks = {
   'Zaryad\'ye Park': {'Kitai-Gorod (Tagansko-Krasnopresnenskaya Line)', 'Kitai-Gorod (Kaluzhsko-Rizhskaya Line)'},
   'Nikulin\'s Circus': {'Tsvetnoi Blvd.', 'Trubnaya'},
   'Muzeon Park of Arts': {'Oktyabrskaya', 'Oktyabrskaya (Ring Line)'},
-  'Gorky Park': {'Oktyabrskaya', 'Oktyabrskaya (Ring Line)'},
+  'Gorky Park': {'Oktyabrskaya', 'Oktyabrskaya (Ring Line)', 'Park Kul\'tury (Ring Line)'},
   'Moscow Zoo': {'Barrikadnaya', 'Krasnopresnenskaya'},
   'Moscow State University': {'Vorob\'yevy Gory', 'Universitet', 'Lomonosovskiy Prospekt'},
   'Moscow City': {'Vystavochnaya', 'Mezhdunarodnaya', 'Delovoy Tsentr'},

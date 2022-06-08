@@ -5,7 +5,7 @@ from LandmarkChoices import landmark_choices
 
 landmark_string = '\n'.join(f'{letter}: {landmark}' for letter, landmark in landmark_choices.items())
 
-stations_under_construction = ['Fili']
+stations_under_construction = ['Oktyabrskaya (Ring Line)']
 
 
 def route_planner():
