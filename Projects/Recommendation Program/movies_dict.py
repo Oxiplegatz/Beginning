@@ -1,38 +1,370 @@
-movies = {
+movies_database = {
     'The Shawshank Redemption': [
-        ['drama'],
+        'The Shawshank Redemption',
+        ('drama', ),
         'Frank Darabont',
-        ['Frank Darabont', 'Stephen King'],
-        ['Tim Robbins', 'Morgan Freeman', 'Bob Gunton'],
+        ('Frank Darabont', 'Stephen King'),
+        ('Tim Robbins', 'Morgan Freeman', 'Bob Gunton'),
+        ('Two imprisoned men bond over a number of years, finding solace and eventual'
+         ' redemption through acts of common decency.'),
         142,
         1994,
-        9.2
+        9.2,
     ],
     'The Godfather': [
-        ['crime', 'drama'],
+        'The Godfather',
+        ('crime', 'drama'),
         'Francis Ford Coppola',
-        ['Mario Puzo', 'Francis Ford Coppola'],
-        ['Marlon Brando', 'Al Pacino', 'James Caan'],
+        ('Mario Puzo', 'Francis Ford Coppola'),
+        ('Marlon Brando', 'Al Pacino', 'James Caan'),
+        ('The aging patriarch of an organized crime dynasty in postwar New York City'
+         ' transfers control of his clandestine empire to his reluctant youngest son.'),
         175,
         1972,
-        9.2
+        9.2,
     ],
     'The Dark Knight': [
-        ['action', 'crime', 'drama'],
-        'Cristopher Nolan',
-        ['Jonathan Nolan', 'Cristopher Nolan', 'David S. Goyer'],
-        ['Christian Bale', 'Heath Ledger', 'Aaron Eckhart'],
+        'The Dark Knight',
+        ('action', 'crime', 'drama'),
+        'Christopher Nolan',
+        ('Jonathan Nolan', 'Cristopher Nolan', 'David S. Goyer'),
+        ('Christian Bale', 'Heath Ledger', 'Aaron Eckhart'),
+        ('When the menace known as the Joker wreaks havoc and chaos on the people of Gotham,'
+         ' Batman must accept one of the greatest psychological and physical tests of his ability'
+         ' to fight injustice.'),
         152,
         2008,
-        9.0
+        9.0,
     ],
     'The Godfather Part II': [
-        ['crime', 'drama'],
+        'The Godfather Part II',
+        ('crime', 'drama'),
         'Francis Ford Coppola',
-        ['Mario Puzo', 'Francis Ford Coppola'],
-        ['Al Pacino', 'Robert De Niro', 'Robert Duvall'],
+        ('Mario Puzo', 'Francis Ford Coppola'),
+        ('Al Pacino', 'Robert De Niro', 'Robert Duvall'),
+        ('The early life and career of Vito Corleone in 1920s New York City is portrayed,'
+         ' while his son, Michael, expands and tightens his grip on the family crime syndicate.'),
         202,
         1974,
-        9.0
-    ]
+        9.0,
+    ],
+    '12 Angry Men': [
+        '12 Angry Men',
+        ('crime', 'drama'),
+        'Sidney Lumet',
+        ('Reginald Rose', ),
+        ('Henry Fonda', 'Lee J. Cobb', 'Martin Balsam'),
+        ('The jury in a New York City murder trial is frustrated by a single member whose skeptical caution'
+         ' forces them to more carefully consider the evidence before jumping to a hasty verdict.'),
+        96,
+        1957,
+        9.0,
+    ],
+    'Schindler\'s List': [
+        'Schindler\'s List',
+        ('biography', 'drama', 'history'),
+        'Steven Spielberg',
+        ('Thomas Keneally', 'Steven Zaillian'),
+        ('Liam Neeson', 'Ralph Fiennes', 'Ben Kingsley'),
+        ('In German-occupied Poland during World War II, industrialist Oskar Schindler gradually'
+         ' becomes concerned for his Jewish workforce after witnessing their persecution by the Nazis.'),
+        195,
+        1993,
+        9.0,
+    ],
+    'The Lord of the Rings: The Return of the King': [
+        'The Lord of the Rings: The Return of the King',
+        ('action', 'adventure', 'drama'),
+        'Peter Jackson',
+        ('J.R.R. Tolkien', 'Fran Walsh', 'Philippa Boyens'),
+        ('Elijah Wood', 'Viggo Mortensen', 'Ian McKellen'),
+        ('Gandalf and Aragorn lead the World of Men against Sauron\'s army to draw his gaze'
+         ' from Frodo and Sam as they approach Mount Doom with the One Ring.'),
+        201,
+        2003,
+        9.0,
+    ],
+    'Pulp Fiction': [
+        'Pulp Fiction',
+        ('crime', 'drama'),
+        'Quentin Tarantino',
+        ('Quentin Tarantino', 'Roger Avary'),
+        ('John Travolta', 'Uma Thurman', 'Samuel L. Jackson'),
+        ('The lives of two mob hitmen, a boxer, a gangster and his wife,'
+         ' and a pair of diner bandits intertwine in four tales of violence and redemption.'),
+        154,
+        1994,
+        8.9,
+    ],
+    'The Lord of the Rings: The Fellowship of the Ring': [
+        'The Lord of the Rings: The Fellowship of the Ring',
+        ('action', 'adventure', 'drama'),
+        'Peter Jackson',
+        ('J.R.R. Tolkien', 'Fran Walsh', 'Philippa Boyens'),
+        ('Elijah Wood', 'Orlando Bloom', 'Ian McKellen'),
+        ('A meek Hobbit from the Shire and eight companions set out on a journey'
+         ' to destroy the powerful One Ring and save Middle-earth from the Dark Lord Sauron.'),
+        178,
+        2001,
+        8.8,
+    ],
+    'Il buono, il brutto, il cattivo': [
+        'Il buono, il brutto, il cattivo',
+        ('adventure', 'western'),
+        'Sergio Leone',
+        ('Luciano Vincenzoni', 'Sergio Leone', 'Agenore Incrocci'),
+        ('Clint Eastwood', 'Eli Wallach', 'Lee Van Cleef'),
+        ('A bounty hunting scam joins two men in an uneasy alliance against a third'
+         ' in a race to find a fortune in gold buried in a remote cemetery.'),
+        161,
+        1966,
+        8.8,
+    ],
+    'Forrest Gump': [
+        'Forrest Gump',
+        ('drama', 'romance'),
+        'Robert Zemeckis',
+        ('Winston Groom', 'Eric Roth'),
+        ('Tom Hanks', 'Robin Wright', 'Gary Sinise'),
+        ('The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal'
+         ' and other historical events unfold from the perspective of an Alabama man'
+         ' with an IQ of 75, whose only desire is to be reunited with his childhood sweetheart.'),
+        142,
+        1994,
+        8.8,
+    ],
+    'Fight Club': [
+        'Fight Club',
+        ('drama', ),
+        'David Fincher',
+        ('Chuck Palahniuk', 'Jim Uhls'),
+        ('Brad Pitt', 'Edward Norton', 'Meat Loaf'),
+        ('An insomniac office worker and a devil-may-care soap maker'
+         ' form an underground fight club that evolves into much more.'),
+        139,
+        1999,
+        8.8,
+    ],
+    'Inception': [
+        'Inception',
+        ('action', 'adventure', 'sci-fi'),
+        'Christopher Nolan',
+        ('Christopher Nolan', ),
+        ('Leonardo DiCaprio', 'Joseph Gordon-Levitt', 'Elliot Page'),
+        ('A thief who steals corporate secrets through the use of dream-sharing technology'
+         ' is given the inverse task of planting an idea into the mind of a C.E.O.,'
+         ' but his tragic past may doom the project and his team to disaster.'),
+        148,
+        2010,
+        8.8,
+    ],
+    'The Lord of the Rings: The Two Towers': [
+        'The Lord of the Rings: The Two Towers',
+        ('action', 'adventure', 'drama'),
+        'Peter Jackson',
+        ('J.R.R. Tolkien', 'Fran Walsh', 'Philippa Boyens'),
+        ('Elijah Wood', 'Viggo Mortensen', 'Ian McKellen'),
+        ('While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum,'
+         ' the divided fellowship makes a stand against Sauron\'s new ally, Saruman, and his hordes of Isengard.'),
+        179,
+        2002,
+        8.8,
+    ],
+    'The Empire Strikes Back': [
+        'The Empire Strikes Back',
+        ('action', 'adventure', 'fantasy'),
+        'Irvin Kershner',
+        ('Leigh Brackett', 'Lawrence Kasdan', 'George Lucas'),
+        ('Mark Hamill', 'Harrison Ford', 'Carrie Fisher'),
+        ('After the Rebels are brutally overpowered by the Empire on the ice planet Hoth,'
+         ' Luke Skywalker begins Jedi training with Yoda, while his friends are pursued'
+         ' across the galaxy by Darth Vader and bounty hunter Boba Fett.'),
+        124,
+        1980,
+        8.7,
+    ],
+    'The Matrix': [
+        'The Matrix',
+        ('action', 'sci-fi'),
+        'Lana Wachowski and Lilly Wachowski',
+        ('Lilly Wachowski', 'Lana Wachowski'),
+        ('Keanu Reeves', 'Laurence Fishburne', 'Carrie-Anne Moss'),
+        ('When a beautiful stranger leads computer hacker Neo to a forbidding underworld,'
+         ' he discovers the shocking truth--the life he knows is the elaborate deception'
+         ' of an evil cyber-intelligence.'),
+        136,
+        1999,
+        8.7,
+    ],
+    'Goodfellas': [
+        'Goodfellas',
+        ('biography', 'crime', 'drama'),
+        'Martin Scorcese',
+        ('Nicholas Pileggi', 'Martin Scorcese'),
+        ('Robert De Niro', 'Ray Liotta', 'Joe Pesci'),
+        ('The story of Henry Hill and his life in the mob, covering his relationship'
+         ' with his wife Karen Hill and his mob partners Jimmy Conway and Tommy DeVito'
+         ' in the Italian-American crime syndicate.'),
+        145,
+        1990,
+        8.7,
+    ],
+    'One Flew Over the Cuckoo\'s Nest': [
+        'One Flew Over the Cuckoo\'s Nest',
+        ('drama', ),
+        'Milos Forman',
+        ('Lawrence Hauben', 'Bo Goldman', 'Ken Kesey'),
+        ('Jack Nicholson', 'Louise Fletcher', 'Michael Berryman'),
+        ('A criminal pleads insanity and is admitted to a mental institution,'
+         ' where he rebels against the oppressive nurse and rallies up the scared patients.'),
+        133,
+        1975,
+        8.7,
+    ],
+    'Se7en': [
+        'Se7en',
+        ('crime', 'drama', 'mystery'),
+        'David Fincher',
+        ('Andrew Kevin Walker', ),
+        ('Moran Freeman', 'Brad Pitt', 'Kevin Spacey'),
+        ('Two detectives, a rookie and a veteran, hunt a serial killer'
+         ' who uses the seven deadly sins as his motives.'),
+        127,
+        1995,
+        8.6,
+    ],
+    'Shichinin no samurai': [
+        'Shichinin no samurai',
+        ('action', 'drama'),
+        'Akira Kurosawa',
+        ('Akira Kurosawa', 'Shiobu Hashimoto', 'Hideo Oguni'),
+        ('Toshiro Mifune', 'Takashi Shimura', 'Keiko Tsushima'),
+        ('A poor village under attack by bandits recruits seven unemployed samurai'
+         ' to help them defend themselves.'),
+        207,
+        1954,
+        8.6,
+    ],
+    'It\'s a Wonderful Life': [
+        'It\'s a Wonderful Life',
+        ('drama', 'family', 'fantasy'),
+        'Frank Capra',
+        ('Frances Goodrich', 'Albert Hackett', 'Frank Capra'),
+        ('James Stewart', 'Donna Reed', 'Lionel Barrymore'),
+        ('An angel is sent from Heaven to help a desperately frustrated businessman'
+         ' by showing him what life would have been like if he had never existed.'),
+        130,
+        1946,
+        8.6,
+    ],
+    'The Silence of the Lambs': [
+        'The Silence of the Lambs',
+        ('crime', 'drama', 'thriller'),
+        'Jonathan Demme',
+        ('Thomas Harris', 'Ted Tally'),
+        ('Jodie Foster', 'Anthony Hopkins', 'Lawrence A. Bonney'),
+        ('A young F.B.I. cadet must receive the help of an incarcerated and manipulative'
+         ' cannibal killer to help catch another serial killer, a madman who skins his victims.'),
+        118,
+        1991,
+        8.6,
+    ],
+    'Cidade de Deus': [
+        'Cidade de Deus',
+        ('crime', 'drama'),
+        'Fernando Meirelles and Katia Lund',
+        ('Paulo Lins', 'Braulio Mantovani'),
+        ('Alexandre Rodrigues', 'Leandro Firmino', 'Matheus Nachterdaele'),
+        ('In the slums of Rio, two kids\' paths diverge as one struggles to become a photographer'
+         ' and the other a kingpin.'),
+        130,
+        2002,
+        8.6,
+    ],
+    'Saving Private Ryan': [
+        'Saving Private Ryan',
+        ('drama', 'war'),
+        'Steven Spielberg',
+        ('Robert Rodat', ),
+        ('Tom Hanks', 'Matt Damon', 'Tom Sizemore'),
+        ('Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines'
+         ' to retrieve a paratrooper whose brothers have been killed in action.'),
+        169,
+        1998,
+        8.6,
+    ],
+    'La vita è bella': [
+        'La vita è bella',
+        ('comedy', 'drama', 'romance'),
+        'Roberto Benigni',
+        ('Vincenzo Cerami', 'Roberto Benigni'),
+        ('Roberto Benigni', 'Nicoletta Braschi', 'Giorgio Cantarini'),
+        ('When an open-minded Jewish waiter and his son become victims of the Holocaust,'
+         ' he uses a perfect mixture of will, humor, and imagination to protect his son'
+         ' from the dangers around their camp.'),
+        116,
+        1997,
+        8.6,
+    ],
+    'The Green Mile': [
+        'The Green Mile',
+        ('crime', 'drama', 'fantasy'),
+        'Frank Darabont',
+        ('Stephen King', 'Frank Darabont'),
+        ('Tom Hanks', 'Michael Clarke Duncan', 'David Morse'),
+        ('The lives of guards on Death Row are affected by one of their charges:'
+         ' a black man accused of child murder and rape, yet who has a mysterious gift.'),
+        189,
+        1999,
+        8.6,
+    ],
+    'Interstellar': [
+        'Interstellar',
+        ('adventure', 'drama', 'sci-fi'),
+        'Christopher Nolan',
+        ('Christopher Nolan', 'Johnathan Nolan'),
+        ('Matthew McConaughey', 'Anne Hathaway', 'Jessica Chastain'),
+        'A team of explorers travel through a wormhole in space in an attempt to ensure humanity\'s survival.',
+        169,
+        2014,
+        8.6
+    ],
+    'Star Wars': [
+        'Star Wars',
+        ('action', 'adventure', 'fantasy'),
+        'George Lucas',
+        ('George Lucas', ),
+        ('Mark Hamill', 'Harrison Ford', 'Carrie Fisher'),
+        ('Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee'
+         ' and two droids to save the galaxy from the Empire\'s world-destroying battle station,'
+         ' while also attempting to rescue Princess Leia from the mysterious Darth Vader.'),
+        121,
+        1977,
+        8.6,
+    ],
+    'Terminator 2: Judgment Day': [
+        'Terminator 2: Judgment Day',
+        ('action', 'sci-fi'),
+        'James Cameron',
+        ('James Cameron', 'William Wisher'),
+        ('Arnold Schwarzenegger', 'Linda Hamilton', 'Edward Furlong'),
+        ('A cyborg, identical to the one who failed to kill Sarah Connor, must now protect'
+         ' her ten-year-old son John from a more advanced and powerful cyborg.'),
+        137,
+        1991,
+        8.6,
+    ],
+    'Back to the Future': [
+        'Back to the Future',
+        ('adventure', 'comedy', 'sci-fi'),
+        'Robert Zemeckis',
+        ('Robert Zemeckis', 'Bob Gale'),
+        ('Michael J. Fox', 'Christopher Lloyd', 'Lea Thompson'),
+        ('Marty McFly, a 17-year-old high school student, is accidentally sent thirty years'
+         ' into the past in a time-traveling DeLorean invented by his close friend,'
+         ' the eccentric scientist Doc Brown.'),
+        116,
+        1985,
+        8.5,
+    ],
 }
