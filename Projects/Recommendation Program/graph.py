@@ -27,26 +27,6 @@ class Graph:
             self.graph_dict[to_vertex.value].add_edge(from_vertex.value, weight)
 
 
-def bfs(graph: dict, start_vertex: str, target_value: str) -> list | None:
-    """Breadth-First Search."""
-    path = [start_vertex]
-    vertex_and_path = [start_vertex, path]
-    bfs_queue = [vertex_and_path]
-    visited = set()
-
-    while bfs_queue:
-        current_vertex, path = bfs_queue.pop(0)
-        visited.add(current_vertex)
-
-        for neighbor in graph[current_vertex]:
-            if neighbor not in visited:
-                if neighbor == target_value:
-                    path.append(neighbor)
-                    return path
-                else:
-                    bfs_queue.append([neighbor, path + [neighbor]])
-
-
 def print_graph(graph: Graph) -> None:
     """Prints out a graph."""
 
@@ -61,11 +41,34 @@ def print_graph(graph: Graph) -> None:
             print(f'=> {adjacent_vertex}, edge weight is: {edge_weight}')
 
 
-def get_formatted_graph(graph: Graph) -> dict:
-    """Returns graph formatted as dictionary suitable for BFS."""
-    graph_dictionary = {}
+# Unused in the current version, these functions can perform a BFS on the graph and find the shortest
+# path from one movie to another
 
-    for vertex in graph.graph_dict:
-        graph_dictionary[vertex] = {neighbor for neighbor in graph.graph_dict[vertex].edges}
-
-    return graph_dictionary
+# def bfs(graph: dict, start_vertex: str, target_value: str) -> list | None:
+#     """Breadth-First Search."""
+#     path = [start_vertex]
+#     vertex_and_path = [start_vertex, path]
+#     bfs_queue = [vertex_and_path]
+#     visited = set()
+#
+#     while bfs_queue:
+#         current_vertex, path = bfs_queue.pop(0)
+#         visited.add(current_vertex)
+#
+#         for neighbor in graph[current_vertex]:
+#             if neighbor not in visited:
+#                 if neighbor == target_value:
+#                     path.append(neighbor)
+#                     return path
+#                 else:
+#                     bfs_queue.append([neighbor, path + [neighbor]])
+#
+#
+# def get_formatted_graph(graph: Graph) -> dict:
+#     """Returns graph formatted as dictionary suitable for BFS."""
+#     graph_dictionary = {}
+#
+#     for vertex in graph.graph_dict:
+#         graph_dictionary[vertex] = {neighbor for neighbor in graph.graph_dict[vertex].edges}
+#
+#     return graph_dictionary

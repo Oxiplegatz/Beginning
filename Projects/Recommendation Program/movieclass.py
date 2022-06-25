@@ -8,7 +8,7 @@ class Movie:
 
     title: str
     genre: tuple
-    director: str
+    director: tuple
     writer: tuple
     cast: tuple
     synopsis: str
@@ -26,7 +26,7 @@ class Movie:
     def get_description(self) -> str:
         movie_description = (self.DESCRIPTION.format(
             title=self.title,
-            director=self.director,
+            director=', '.join(self.director),
             writer=', '.join(self.writer),
             cast=', '.join(self.cast[:-1]) + f' and {self.cast[-1]}',
             genre=', '.join(self.genre),

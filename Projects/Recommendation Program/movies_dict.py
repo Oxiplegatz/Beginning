@@ -2,7 +2,7 @@ movies_database = {
     'The Shawshank Redemption': [
         'The Shawshank Redemption',
         ('drama', ),
-        'Frank Darabont',
+        ('Frank Darabont',),
         ('Frank Darabont', 'Stephen King'),
         ('Tim Robbins', 'Morgan Freeman', 'Bob Gunton'),
         ('Two imprisoned men bond over a number of years, finding solace and eventual'
@@ -14,7 +14,7 @@ movies_database = {
     'The Godfather': [
         'The Godfather',
         ('crime', 'drama'),
-        'Francis Ford Coppola',
+        ('Francis Ford Coppola', ),
         ('Mario Puzo', 'Francis Ford Coppola'),
         ('Marlon Brando', 'Al Pacino', 'James Caan'),
         ('The aging patriarch of an organized crime dynasty in postwar New York City'
@@ -26,8 +26,8 @@ movies_database = {
     'The Dark Knight': [
         'The Dark Knight',
         ('action', 'crime', 'drama'),
-        'Christopher Nolan',
-        ('Jonathan Nolan', 'Cristopher Nolan', 'David S. Goyer'),
+        ('Christopher Nolan', ),
+        ('Jonathan Nolan', 'Christopher Nolan', 'David S. Goyer'),
         ('Christian Bale', 'Heath Ledger', 'Aaron Eckhart'),
         ('When the menace known as the Joker wreaks havoc and chaos on the people of Gotham,'
          ' Batman must accept one of the greatest psychological and physical tests of his ability'
@@ -39,7 +39,7 @@ movies_database = {
     'The Godfather Part II': [
         'The Godfather Part II',
         ('crime', 'drama'),
-        'Francis Ford Coppola',
+        ('Francis Ford Coppola', ),
         ('Mario Puzo', 'Francis Ford Coppola'),
         ('Al Pacino', 'Robert De Niro', 'Robert Duvall'),
         ('The early life and career of Vito Corleone in 1920s New York City is portrayed,'
@@ -51,7 +51,7 @@ movies_database = {
     '12 Angry Men': [
         '12 Angry Men',
         ('crime', 'drama'),
-        'Sidney Lumet',
+        ('Sidney Lumet', ),
         ('Reginald Rose', ),
         ('Henry Fonda', 'Lee J. Cobb', 'Martin Balsam'),
         ('The jury in a New York City murder trial is frustrated by a single member whose skeptical caution'
@@ -63,7 +63,7 @@ movies_database = {
     'Schindler\'s List': [
         'Schindler\'s List',
         ('biography', 'drama', 'history'),
-        'Steven Spielberg',
+        ('Steven Spielberg', ),
         ('Thomas Keneally', 'Steven Zaillian'),
         ('Liam Neeson', 'Ralph Fiennes', 'Ben Kingsley'),
         ('In German-occupied Poland during World War II, industrialist Oskar Schindler gradually'
@@ -75,7 +75,7 @@ movies_database = {
     'The Lord of the Rings: The Return of the King': [
         'The Lord of the Rings: The Return of the King',
         ('action', 'adventure', 'drama'),
-        'Peter Jackson',
+        ('Peter Jackson', ),
         ('J.R.R. Tolkien', 'Fran Walsh', 'Philippa Boyens'),
         ('Elijah Wood', 'Viggo Mortensen', 'Ian McKellen'),
         ('Gandalf and Aragorn lead the World of Men against Sauron\'s army to draw his gaze'
@@ -87,7 +87,7 @@ movies_database = {
     'Pulp Fiction': [
         'Pulp Fiction',
         ('crime', 'drama'),
-        'Quentin Tarantino',
+        ('Quentin Tarantino', ),
         ('Quentin Tarantino', 'Roger Avary'),
         ('John Travolta', 'Uma Thurman', 'Samuel L. Jackson'),
         ('The lives of two mob hitmen, a boxer, a gangster and his wife,'
@@ -99,7 +99,7 @@ movies_database = {
     'The Lord of the Rings: The Fellowship of the Ring': [
         'The Lord of the Rings: The Fellowship of the Ring',
         ('action', 'adventure', 'drama'),
-        'Peter Jackson',
+        ('Peter Jackson', ),
         ('J.R.R. Tolkien', 'Fran Walsh', 'Philippa Boyens'),
         ('Elijah Wood', 'Orlando Bloom', 'Ian McKellen'),
         ('A meek Hobbit from the Shire and eight companions set out on a journey'
@@ -108,10 +108,10 @@ movies_database = {
         2001,
         8.8,
     ],
-    'Il buono, il brutto, il cattivo': [
-        'Il buono, il brutto, il cattivo',
+    'The Good, the Bad and the Ugly (Il buono, il brutto, il cattivo)': [
+        'The Good, the Bad and the Ugly (Il buono, il brutto, il cattivo)',
         ('adventure', 'western'),
-        'Sergio Leone',
+        ('Sergio Leone', ),
         ('Luciano Vincenzoni', 'Sergio Leone', 'Agenore Incrocci'),
         ('Clint Eastwood', 'Eli Wallach', 'Lee Van Cleef'),
         ('A bounty hunting scam joins two men in an uneasy alliance against a third'
@@ -123,7 +123,7 @@ movies_database = {
     'Forrest Gump': [
         'Forrest Gump',
         ('drama', 'romance'),
-        'Robert Zemeckis',
+        ('Robert Zemeckis', ),
         ('Winston Groom', 'Eric Roth'),
         ('Tom Hanks', 'Robin Wright', 'Gary Sinise'),
         ('The presidencies of Kennedy and Johnson, the Vietnam War, the Watergate scandal'
@@ -136,7 +136,7 @@ movies_database = {
     'Fight Club': [
         'Fight Club',
         ('drama', ),
-        'David Fincher',
+        ('David Fincher', ),
         ('Chuck Palahniuk', 'Jim Uhls'),
         ('Brad Pitt', 'Edward Norton', 'Meat Loaf'),
         ('An insomniac office worker and a devil-may-care soap maker'
@@ -148,7 +148,7 @@ movies_database = {
     'Inception': [
         'Inception',
         ('action', 'adventure', 'sci-fi'),
-        'Christopher Nolan',
+        ('Christopher Nolan', ),
         ('Christopher Nolan', ),
         ('Leonardo DiCaprio', 'Joseph Gordon-Levitt', 'Elliot Page'),
         ('A thief who steals corporate secrets through the use of dream-sharing technology'
@@ -161,7 +161,7 @@ movies_database = {
     'The Lord of the Rings: The Two Towers': [
         'The Lord of the Rings: The Two Towers',
         ('action', 'adventure', 'drama'),
-        'Peter Jackson',
+        ('Peter Jackson', ),
         ('J.R.R. Tolkien', 'Fran Walsh', 'Philippa Boyens'),
         ('Elijah Wood', 'Viggo Mortensen', 'Ian McKellen'),
         ('While Frodo and Sam edge closer to Mordor with the help of the shifty Gollum,'
@@ -173,7 +173,7 @@ movies_database = {
     'The Empire Strikes Back': [
         'The Empire Strikes Back',
         ('action', 'adventure', 'fantasy'),
-        'Irvin Kershner',
+        ('Irvin Kershner', ),
         ('Leigh Brackett', 'Lawrence Kasdan', 'George Lucas'),
         ('Mark Hamill', 'Harrison Ford', 'Carrie Fisher'),
         ('After the Rebels are brutally overpowered by the Empire on the ice planet Hoth,'
@@ -186,7 +186,7 @@ movies_database = {
     'The Matrix': [
         'The Matrix',
         ('action', 'sci-fi'),
-        'Lana Wachowski and Lilly Wachowski',
+        ('Lana Wachowski', 'Lilly Wachowski'),
         ('Lilly Wachowski', 'Lana Wachowski'),
         ('Keanu Reeves', 'Laurence Fishburne', 'Carrie-Anne Moss'),
         ('When a beautiful stranger leads computer hacker Neo to a forbidding underworld,'
@@ -199,7 +199,7 @@ movies_database = {
     'Goodfellas': [
         'Goodfellas',
         ('biography', 'crime', 'drama'),
-        'Martin Scorcese',
+        ('Martin Scorcese', ),
         ('Nicholas Pileggi', 'Martin Scorcese'),
         ('Robert De Niro', 'Ray Liotta', 'Joe Pesci'),
         ('The story of Henry Hill and his life in the mob, covering his relationship'
@@ -212,7 +212,7 @@ movies_database = {
     'One Flew Over the Cuckoo\'s Nest': [
         'One Flew Over the Cuckoo\'s Nest',
         ('drama', ),
-        'Milos Forman',
+        ('Milos Forman', ),
         ('Lawrence Hauben', 'Bo Goldman', 'Ken Kesey'),
         ('Jack Nicholson', 'Louise Fletcher', 'Michael Berryman'),
         ('A criminal pleads insanity and is admitted to a mental institution,'
@@ -224,7 +224,7 @@ movies_database = {
     'Se7en': [
         'Se7en',
         ('crime', 'drama', 'mystery'),
-        'David Fincher',
+        ('David Fincher', ),
         ('Andrew Kevin Walker', ),
         ('Moran Freeman', 'Brad Pitt', 'Kevin Spacey'),
         ('Two detectives, a rookie and a veteran, hunt a serial killer'
@@ -233,10 +233,10 @@ movies_database = {
         1995,
         8.6,
     ],
-    'Shichinin no samurai': [
-        'Shichinin no samurai',
+    'Seven Samurai (Shichinin no samurai)': [
+        'Seven Samurai (Shichinin no samurai)',
         ('action', 'drama'),
-        'Akira Kurosawa',
+        ('Akira Kurosawa', ),
         ('Akira Kurosawa', 'Shiobu Hashimoto', 'Hideo Oguni'),
         ('Toshiro Mifune', 'Takashi Shimura', 'Keiko Tsushima'),
         ('A poor village under attack by bandits recruits seven unemployed samurai'
@@ -248,7 +248,7 @@ movies_database = {
     'It\'s a Wonderful Life': [
         'It\'s a Wonderful Life',
         ('drama', 'family', 'fantasy'),
-        'Frank Capra',
+        ('Frank Capra', ),
         ('Frances Goodrich', 'Albert Hackett', 'Frank Capra'),
         ('James Stewart', 'Donna Reed', 'Lionel Barrymore'),
         ('An angel is sent from Heaven to help a desperately frustrated businessman'
@@ -260,7 +260,7 @@ movies_database = {
     'The Silence of the Lambs': [
         'The Silence of the Lambs',
         ('crime', 'drama', 'thriller'),
-        'Jonathan Demme',
+        ('Jonathan Demme', ),
         ('Thomas Harris', 'Ted Tally'),
         ('Jodie Foster', 'Anthony Hopkins', 'Lawrence A. Bonney'),
         ('A young F.B.I. cadet must receive the help of an incarcerated and manipulative'
@@ -269,10 +269,10 @@ movies_database = {
         1991,
         8.6,
     ],
-    'Cidade de Deus': [
-        'Cidade de Deus',
+    'City of God (Cidade de Deus)': [
+        'City of God (Cidade de Deus)',
         ('crime', 'drama'),
-        'Fernando Meirelles and Katia Lund',
+        ('Fernando Meirelles', 'Katia Lund'),
         ('Paulo Lins', 'Braulio Mantovani'),
         ('Alexandre Rodrigues', 'Leandro Firmino', 'Matheus Nachterdaele'),
         ('In the slums of Rio, two kids\' paths diverge as one struggles to become a photographer'
@@ -284,7 +284,7 @@ movies_database = {
     'Saving Private Ryan': [
         'Saving Private Ryan',
         ('drama', 'war'),
-        'Steven Spielberg',
+        ('Steven Spielberg', ),
         ('Robert Rodat', ),
         ('Tom Hanks', 'Matt Damon', 'Tom Sizemore'),
         ('Following the Normandy Landings, a group of U.S. soldiers go behind enemy lines'
@@ -293,10 +293,10 @@ movies_database = {
         1998,
         8.6,
     ],
-    'La vita è bella': [
-        'La vita è bella',
+    'Life Is Beautiful (La vita è bella)': [
+        'Life Is Beautiful (La vita è bella)',
         ('comedy', 'drama', 'romance'),
-        'Roberto Benigni',
+        ('Roberto Benigni', ),
         ('Vincenzo Cerami', 'Roberto Benigni'),
         ('Roberto Benigni', 'Nicoletta Braschi', 'Giorgio Cantarini'),
         ('When an open-minded Jewish waiter and his son become victims of the Holocaust,'
@@ -309,7 +309,7 @@ movies_database = {
     'The Green Mile': [
         'The Green Mile',
         ('crime', 'drama', 'fantasy'),
-        'Frank Darabont',
+        ('Frank Darabont', ),
         ('Stephen King', 'Frank Darabont'),
         ('Tom Hanks', 'Michael Clarke Duncan', 'David Morse'),
         ('The lives of guards on Death Row are affected by one of their charges:'
@@ -321,8 +321,8 @@ movies_database = {
     'Interstellar': [
         'Interstellar',
         ('adventure', 'drama', 'sci-fi'),
-        'Christopher Nolan',
-        ('Christopher Nolan', 'Johnathan Nolan'),
+        ('Christopher Nolan', ),
+        ('Christopher Nolan', 'Jonathan Nolan'),
         ('Matthew McConaughey', 'Anne Hathaway', 'Jessica Chastain'),
         'A team of explorers travel through a wormhole in space in an attempt to ensure humanity\'s survival.',
         169,
@@ -332,7 +332,7 @@ movies_database = {
     'Star Wars': [
         'Star Wars',
         ('action', 'adventure', 'fantasy'),
-        'George Lucas',
+        ('George Lucas', ),
         ('George Lucas', ),
         ('Mark Hamill', 'Harrison Ford', 'Carrie Fisher'),
         ('Luke Skywalker joins forces with a Jedi Knight, a cocky pilot, a Wookiee'
@@ -345,7 +345,7 @@ movies_database = {
     'Terminator 2: Judgment Day': [
         'Terminator 2: Judgment Day',
         ('action', 'sci-fi'),
-        'James Cameron',
+        ('James Cameron', ),
         ('James Cameron', 'William Wisher'),
         ('Arnold Schwarzenegger', 'Linda Hamilton', 'Edward Furlong'),
         ('A cyborg, identical to the one who failed to kill Sarah Connor, must now protect'
@@ -357,7 +357,7 @@ movies_database = {
     'Back to the Future': [
         'Back to the Future',
         ('adventure', 'comedy', 'sci-fi'),
-        'Robert Zemeckis',
+        ('Robert Zemeckis', ),
         ('Robert Zemeckis', 'Bob Gale'),
         ('Michael J. Fox', 'Christopher Lloyd', 'Lea Thompson'),
         ('Marty McFly, a 17-year-old high school student, is accidentally sent thirty years'
@@ -366,5 +366,853 @@ movies_database = {
         116,
         1985,
         8.5,
+    ],
+    'Spirited Away (Sen to Chihiro no kamikakushi)': [
+        'Spirited Away (Sen to Chihiro no kamikakushi)',
+        ('animation', 'adventure', 'family'),
+        ('Hayao Miyazaki', ),
+        ('Hayao Miyazaki', ),
+        ('Daveigh Chase', 'Suzanne Pleshette', 'Miyu Irino'),
+        ('During her family\'s move to the suburbs, a sullen 10-year-old girl wanders into a world'
+         ' ruled by gods, witches, and spirits, and where humans are changed into beasts.'),
+        125,
+        2011,
+        8.6,
+    ],
+    'Psycho': [
+        'Psycho',
+        ('horror', 'mystery', 'thriller'),
+        ('Alfred Hitchcock', ),
+        ('Joseph Stefano', 'Robert Bloch'),
+        ('Anthony Perkins', 'Janet Leigh', 'Vera Miles'),
+        ('A Phoenix secretary embezzles $40,000 from her employer\'s client, goes on the run,'
+         ' and checks into a remote motel run by a young man under the domination of his mother.'),
+        109,
+        1960,
+        8.5,
+    ],
+    'The Pianist': [
+        'The Pianist',
+        ('biography', 'drama', 'music'),
+        ('Roman Polanski', ),
+        ('Ronald Harwood', 'Wladyslaw Szpilman'),
+        ('Adrien Brody', 'Thomas Kretschmann', 'Frank Finlay'),
+        'A Polish Jewish musician struggles to survive the destruction of the Warsaw ghetto of World War II.',
+        150,
+        2002,
+        8.5,
+    ],
+    'Léon': [
+        'Léon',
+        ('action', 'crime', 'drama'),
+        ('Luc Besson', ),
+        ('Luc Besson', ),
+        ('Jean Reno', 'Gary Oldman', 'Natalie Portman'),
+        ('12-year-old Mathilda is reluctantly taken in by Léon, a professional assassin,'
+         ' after her family is murdered. An unusual relationship forms as she becomes his protégée'
+         ' and learns the assassin\'s trade.'),
+        110,
+        1994,
+        8.5,
+    ],
+    'Parasite (Gisaengchung)': [
+        'Parasite (Gisaengchung)',
+        ('comedy', 'drama', 'thriller'),
+        ('Bong Joon Ho', ),
+        ('Bong Joon Ho', 'Han Jin-won'),
+        ('Song Kang-ho', 'Sun-kyun Lee', 'Cho Yeo-jeong'),
+        ('Greed and class discrimination threaten the newly formed symbiotic relationship'
+         ' between the wealthy Park family and the destitute Kim clan.'),
+        132,
+        2019,
+        8.5,
+    ],
+    'The Lion King': [
+        'The Lion King',
+        ('animation', 'adventure', 'drama'),
+        ('Roger Allers', 'Rob Minkoff'),
+        ('Irene Mecchi', 'Jonathan Roberts', 'Linda Woolverton'),
+        ('Matthew Broderick', 'Jeremy Irons', 'James Earl Jones'),
+        'Lion prince Simba and his father are targeted by his bitter uncle, who wants to ascend the throne himself.',
+        88,
+        1994,
+        8.5,
+    ],
+    'Gladiator': [
+        'Gladiator',
+        ('action', 'adventure', 'drama'),
+        ('Ridley Scott', ),
+        ('David Franzoni', 'John Logan', 'William Nicholson'),
+        ('Russel Crowe', 'Joaquin Phoenix', 'Connie Nielsen'),
+        ('A former Roman General sets out to exact vengeance against the corrupt emperor'
+         ' who murdered his family and sent him into slavery.'),
+        155,
+        2000,
+        8.5,
+    ],
+    'American History X': [
+        'American History X',
+        ('crime', 'drama'),
+        ('Tony Kaye', ),
+        ('David McKenna', ),
+        ('Edward Norton', 'Edward Furlong', 'Beverly D\'Angelo'),
+        ('A former neo-nazi skinhead tries to prevent his younger brother from'
+         ' going down the same wrong path that he did.'),
+        119,
+        1998,
+        8.5,
+    ],
+    'The Usual Suspects': [
+        'The Usual Suspects',
+        ('crime', 'drama', 'mystery'),
+        ('Bryan Singer', ),
+        ('Christopher McQuarrie', ),
+        ('Kevin Spacey', 'Gabriel Byrne', 'Chazz Palminteri'),
+        ('A sole survivor tells of the twisty events leading up to a horrific gun battle on a boat,'
+         ' which began when five criminals met at a seemingly random police lineup.'),
+        106,
+        1995,
+        8.5,
+    ],
+    'The Departed': [
+        'The Departed',
+        ('crime', 'drama', 'thriller'),
+        ('Martin Scorcese', ),
+        ('William Monahan', 'Alan Mak', 'Felix Chong'),
+        ('Leonardo DiCaprio', 'Matt Damon', 'Jack Nicholson'),
+        ('An undercover cop and a mole in the police attempt to identify each other'
+         ' while infiltrating an Irish gang in South Boston.'),
+        151,
+        2006,
+        8.5,
+    ],
+    'The Prestige': [
+        'The Prestige',
+        ('drama', 'mystery', 'sci-fi'),
+        ('Christopher Nolan', ),
+        ('Jonathan Nolan', 'Christopher Nolan', 'Christopher Priest'),
+        ('Christian Bale', 'Hugh Jackman', 'Scarlett Johansson'),
+        ('After a tragic accident, two stage magicians in 1890s London engage in a battle'
+         ' to create the ultimate illusion while sacrificing everything they have to outwit each other.'),
+        130,
+        2006,
+        8.5,
+    ],
+    'Casablanca': [
+        'Casablanca',
+        ('drama', 'romance', 'war'),
+        ('Michael Curtiz', ),
+        ('Julius J. Epstein', 'Philip G. Epstein', 'Howard Koch'),
+        ('Humphrey Bogart', 'Ingrid Bergman', 'Paul Henreid'),
+        ('A cynical expatriate American cafe owner struggles to decide whether or not to help'
+         ' his former lover and her fugitive husband escape the Nazis in French Morocco.'),
+        102,
+        1942,
+        8.5,
+    ],
+    'Top Gun: Maverick': [
+        'Top Gun: Maverick',
+        ('action', 'drama'),
+        ('Joseph Kosinski', ),
+        ('Jim Cash', 'Jack Epps Jr.', 'Peter Craig'),
+        ('Tom Cruise', 'Jennifer Connelly', 'Miles Teller'),
+        ('After more than thirty years of service as one of the Navy\'s top aviators, Pete Mitchell'
+         ' is where he belongs, pushing the envelope as a courageous test pilot and dodging'
+         ' the advancement in rank that would ground him.'),
+        130,
+        2022,
+        8.6,
+    ],
+    'Whiplash': [
+        'Whiplash',
+        ('drama', 'music'),
+        ('Damien Chazelle', ),
+        ('Damien Chazelle', ),
+        ('Miles Teller', 'J.K. Simmons', 'Melissa Benoist'),
+        ('A promising young drummer enrolls at a cut-throat music conservatory'
+         ' where his dreams of greatness are mentored by an instructor who will stop at nothing'
+         ' to realize a student\'s potential.'),
+        106,
+        2014,
+        8.5,
+    ],
+    '1+1 (Intouchables)': [
+        '1+1 (Intouchables)',
+        ('biography', 'comedy', 'drama'),
+        ('Olivier Nakache', 'Éric Toledano'),
+        ('Olivier Nakache', 'Philippe Pozzo di Borgo', 'Éric Toledano'),
+        ('Francois Cluzet', 'Omar Sy', 'Anne Le Ny'),
+        ('After he becomes a quadriplegic from a paragliding accident, an aristocrat hires'
+         ' a young man from the projects to be his caregiver.'),
+        112,
+        2011,
+        8.5,
+    ],
+    'Modern Times': [
+        'Modern Times',
+        ('comedy', 'drama', 'romance'),
+        ('Charles Chaplin', ),
+        ('Charles Chaplin', ),
+        ('Charles Chaplin', 'Paulette Goddard', 'Henry Bergman'),
+        'The Tramp struggles to live in modern industrial society with the help of a young homeless woman.',
+        87,
+        1936,
+        8.5,
+    ],
+    'Harakiri (Sepukku)': [
+        'Harakiri (Sepukku)',
+        ('action', 'drama', 'mystery'),
+        ('Masaki Kobayashi', ),
+        ('Yasuhiko Takiguchi', 'Shinobu Hashimoto'),
+        ('Tatsuya Nakadai', 'Akira Ishihama', 'Shima Iwashita'),
+        ('When a ronin requesting seppuku at a feudal lord\'s palace is told of the brutal suicide'
+         ' of another ronin who previously visited, he reveals how their pasts are intertwined'
+         ' - and in doing so challenges the clan\'s integrity.'),
+        133,
+        1962,
+        8.6,
+    ],
+    'Once Upon a Time in the West (C\'era una volta il West)': [
+        'Once Upon a Time in the West (C\'era una volta il West)',
+        ('western', ),
+        ('Sergio Leone', ),
+        ('Sergio Donati', 'Sergio Leone', 'Dario Argento'),
+        ('Henry Fonda', 'Charles Bronson', 'Claudia Cardinale'),
+        ('A mysterious stranger with a harmonica joins forces with a notorious desperado'
+         ' to protect a beautiful widow from a ruthless assassin working for the railroad.'),
+        165,
+        1968,
+        8.5,
+    ],
+    'Grave of the Fireflies (Hotaru no Haka)': [
+        'Grave of the Fireflies (Hotaru no Haka)',
+        ('animation', 'drama', 'war'),
+        ('Isao Takahata', ),
+        ('Akiyuki Nosaka', 'Isao Takahata'),
+        ('Tsutomu Tatsumi', 'Ayano Shiraishi', 'Akemi Yamaguchi'),
+        'A young boy and his little sister struggle to survive in Japan during World War II.',
+        99,
+        1988,
+        8.5,
+    ],
+    'Rear Window': [
+        'Rear Window',
+        ('mystery', 'thriller'),
+        ('Alfred Hitchcock', ),
+        ('John Michael Hayes', 'Cornell Woolrich'),
+        ('James Stewart', 'Grace Kelly', 'Wendell Corey'),
+        ('A wheelchair-bound photographer spies on his neighbors from his Greenwich Village'
+         ' courtyard apartment window, and becomes convinced one of them has committed murder,'
+         ' despite the skepticism of his fashion-model girlfriend.'),
+        112,
+        1954,
+        8.5,
+    ],
+    'Alien': [
+        'Alien',
+        ('horror', 'sci-fi'),
+        ('Ridley Scott', ),
+        ('Dan O\'Bannon', 'Ronald Shusett'),
+        ('Sigourney Weaver', 'Tom Skerritt', 'John Hurt'),
+        ('The crew of a commercial spacecraft encounter a deadly lifeform'
+         ' after investigating an unknown transmission.'),
+        117,
+        1979,
+        8.5,
+    ],
+    'City Lights': [
+        'City Lights',
+        ('comedy', 'drama', 'romance'),
+        ('Charles Chaplin', ),
+        ('Charles Chaplin', 'Harry Carr', 'Harry Crocker'),
+        ('Charles Chaplin', 'Virginia Cherrill', 'Florence Lee'),
+        ('With the aid of a wealthy erratic tippler, a dewy-eyed tramp who has fallen in love'
+         ' with a sightless flower girl accumulates money to be able to help her medically.'),
+        87,
+        1931,
+        8.5,
+    ],
+    'Cinema Paradiso (Nuovo Cinema Paradiso)': [
+        'Cinema Paradiso (Nuovo Cinema Paradiso)',
+        ('drama', 'romance'),
+        ('Giuseppe Tornatore', ),
+        ('Giuseppe Tornatore', 'Vanna Paoli'),
+        ('Philippe Noiret', 'Enzo Cannavale', 'Antonella Attilli'),
+        ('A filmmaker recalls his childhood when falling in love with the pictures'
+         ' at the cinema of his home village and forms a deep friendship with the cinema\'s projectionist.'),
+        155,
+        1988,
+        8.5,
+    ],
+    'Memento': [
+        'Memento',
+        ('mystery', 'thriller'),
+        ('Christopher Nolan', ),
+        ('Christopher Nolan', 'Jonathan Nolan'),
+        ('Guy Pearce', 'Carrie-Anne Moss', 'Joe Pantoliano'),
+        'A man with short-term memory loss attempts to track down his wife\'s murderer.',
+        113,
+        2000,
+        8.4,
+    ],
+    'Apocalypse Now': [
+        'Apocalypse Now',
+        ('drama', 'mystery', 'war'),
+        ('Francis Ford Coppola', ),
+        ('John Milius', 'Francis Ford Coppola', 'Michael Herr'),
+        ('Martin Sheen', 'Marlon Brando', 'Robert Duvall'),
+        ('A U.S. Army officer serving in Vietnam is tasked with assassinating a renegade'
+         ' Special Forces Colonel who sees himself as a god.'),
+        147,
+        1979,
+        8.5,
+    ],
+    'Raiders of the Lost Ark': [
+        'Raiders of the Lost Ark',
+        ('action', 'adventure'),
+        ('Steven Spielberg', ),
+        ('Lawrence Kasdan', 'George Lucas', 'Philip Kaufman'),
+        ('Harrison Ford', 'Karen Allen', 'Paul Freeman'),
+        ('In 1936, archaeologist and adventurer Indiana Jones is hired by the U.S. government'
+         ' to find the Ark of the Covenant before Adolf Hitler\'s Nazis can obtain its awesome powers.'),
+        115,
+        1981,
+        8.4,
+    ],
+    'Django Unchained': [
+        'Django Unchained',
+        ('drama', 'western'),
+        ('Quentin Tarantino', ),
+        ('Quentin Tarantino', ),
+        ('Jamie Foxx', 'Christoph Waltz', 'Leonardo DiCaprio'),
+        ('With the help of a German bounty-hunter, a freed slave sets out to rescue'
+         ' his wife from a brutal plantation-owner in Mississippi.'),
+        165,
+        2012,
+        8.4,
+    ],
+    'WALL·E': [
+        'WALL·E',
+        ('animation', 'adventure', 'family'),
+        ('Andrew Stanton', ),
+        ('Andrew Stanton', 'Pete Docter', 'Jim Reardon'),
+        ('Ben Burtt', 'Elissa Knight', 'Jeff Garlin'),
+        ('In the distant future, a small waste-collecting robot inadvertently embarks'
+         ' on a space journey that will ultimately decide the fate of mankind.'),
+        98,
+        2008,
+        8.4,
+    ],
+    'The Lives of Others (Das Leben der Anderen)': [
+        'The Lives of Others (Das Leben der Anderen)',
+        ('drama', 'mystery', 'thriller'),
+        ('Florian Henckel von Donnersmarck', ),
+        ('Florian Henckel von Donnersmarck', ),
+        ('Ulrich Muhe', 'Martina Gedeck', 'Sebastian Koch'),
+        ('In 1984 East Berlin, an agent of the secret police, conducting surveillance'
+         ' on a writer and his lover, finds himself becoming increasingly absorbed by their lives.'),
+        137,
+        2006,
+        8.4,
+    ],
+    'Sunset Blvd.': [
+        'Sunset Blvd.',
+        ('drama', 'film-noir'),
+        ('Billy Wilder', ),
+        ('Charles Brackett', 'Billy Wilder', 'D.M. Marshman Jr.'),
+        ('William Holden', 'Gloria Swanson', 'Erich von Stroheim'),
+        ('A screenwriter develops a dangerous relationship with a faded film star'
+         ' determined to make a triumphant return.'),
+        110,
+        1950,
+        8.4,
+    ],
+    'Paths of Glory': [
+        'Paths of Glory',
+        ('drama', 'war'),
+        ('Stanley Kubrick', ),
+        ('Stanley Kubrick', 'Calder Willingham', 'Jim Thompson'),
+        ('Kirk Douglas', 'Ralph Meeker', 'Adolphe Menjou'),
+        ('After refusing to attack an enemy position, a general accuses the soldiers of cowardice'
+         ' and their commanding officer must defend them.'),
+        98,
+        1957,
+        8.4,
+    ],
+    'The Shining': [
+        'The Shining',
+        ('drama', 'horror'),
+        ('Stanley Kubrick', ),
+        ('Stephen King', 'Stanley Kubrick', 'Diane Johnson'),
+        ('Jack Nicholson', 'Shelley Duvall', 'Danny Lloyd'),
+        ('A family heads to an isolated hotel for the winter where a sinister presence'
+         ' influences the father into violence, while his psychic son sees horrific forebodings'
+         ' from both past and future.'),
+        146,
+        1980,
+        8.4,
+    ],
+    'The Great Dictator': [
+        'The Great Dictator',
+        ('comedy', 'drama', 'war'),
+        ('Charles Chaplin', ),
+        ('Charles Chaplin', ),
+        ('Charles Chaplin', 'Paulette Goddard', 'Jack Oakie'),
+        ('Dictator Adenoid Hynkel tries to expand his empire while a poor Jewish barber'
+         ' tries to avoid persecution from Hynkel\'s regime.'),
+        125,
+        1940,
+        8.4,
+    ],
+    'Witness for the Prosecution': [
+        'Witness for the Prosecution',
+        ('crime', 'drama', 'mystery'),
+        ('Billy Wilder', ),
+        ('Agatha Christie', 'Billy Wilder', 'Harry Kurnitz'),
+        ('Tyrone Power', 'Marlene Dietrich', 'Charles Laughton'),
+        'A veteran British barrister must defend his client in a murder trial that has surprise after surprise.',
+        116,
+        1957,
+        8.4,
+    ],
+    'Avengers: Infinity War': [
+        'Avengers: Infinity War',
+        ('action', 'adventure', 'sci-fi'),
+        ('Anthony Russo', 'Joe Russo'),
+        ('Christopher Markus', 'Stephen McFeely', 'Stan Lee'),
+        ('Robert Downey Jr.', 'Chris Hemsworth', 'Mark Ruffalo'),
+        ('The Avengers and their allies must be willing to sacrifice all in an attempt'
+         ' to defeat the powerful Thanos before his blitz of devastation and ruin puts an end to the universe.'),
+        149,
+        2018,
+        8.4,
+    ],
+    'Aliens': [
+        'Aliens',
+        ('action', 'adventure', 'sci-fi'),
+        ('James Cameron', ),
+        ('James Cameron', 'David Giler', 'Walter Hill'),
+        ('Sigourney Weaver', 'Michael Biehn', 'Carrie Henn'),
+        ('Fifty-seven years after surviving an apocalyptic attack aboard her space vessel'
+         ' by merciless space creatures, Officer Ripley awakens from hyper-sleep and tries'
+         ' to warn anyone who will listen about the predators.'),
+        137,
+        1986,
+        8.4,
+    ],
+    'American Beauty': [
+        'American Beauty',
+        ('drama', ),
+        ('Sam Mendes', ),
+        ('Alan Ball', ),
+        ('Kevin Spacey', 'Annette Bening', 'Thora Birch'),
+        ('A sexually frustrated suburban father has a mid-life crisis'
+         ' after becoming infatuated with his daughter\'s best friend.'),
+        122,
+        1999,
+        8.4,
+    ],
+    'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb': [
+        'Dr. Strangelove or: How I Learned to Stop Worrying and Love the Bomb',
+        ('comedy', 'war'),
+        ('Stanley Kubrick', ),
+        ('Stanley Kubrick', 'Terry Southern', 'Peter George'),
+        ('Peter Sellers', 'George C. Scott', 'Sterling Hayden'),
+        ('An insane American general orders a bombing attack on the Soviet Union,'
+         ' triggering a path to nuclear holocaust that a war room full of politicians and generals'
+         ' frantically tries to stop.'),
+        95,
+        1964,
+        8.4,
+    ],
+    'Spider-Man: Into the Spider-Verse': [
+        'Spider-Man: Into the Spider-Verse',
+        ('animation', 'action', 'adventure'),
+        ('Bob Perischetti', 'Peter Ramsey', 'Rodney Rothman'),
+        ('Phil Lord', 'Rodney Rothman'),
+        ('Shameik Moore', 'Jake Johnson', 'Hailee Steinfeld'),
+        ('Teen Miles Morales becomes the Spider-Man of his universe, and must join with five'
+         ' spider-powered individuals from other dimensions to stop a threat for all realities.'),
+        117,
+        2018,
+        8.4,
+    ],
+    'The Dark Knight Rises': [
+        'The Dark Knight Rises',
+        ('acton', 'drama'),
+        ('Christopher Nolan', ),
+        ('Jonathan Nolan', 'Christopher Nolan', 'David S. Goyer'),
+        ('Christian Bale', 'Tom Hardy', 'Anne Hathaway'),
+        ('Eight years after the Joker\'s reign of anarchy, Batman, with the help of the enigmatic Catwoman,'
+         ' is forced from his exile to save Gotham City from the brutal guerrilla terrorist Bane.'),
+        164,
+        2012,
+        8.4,
+    ],
+    'Oldboy (Oldeuboi)': [
+        'Oldboy (Oldeuboi)',
+        ('action', 'drama', 'mystery'),
+        ('Park Chan-wook', ),
+        ('Garon Tsuchiya', 'Nobuaki Minegishi', 'Park Chan-wook'),
+        ('Choi Min-sik', 'Yoo Ji-Tae', 'Kang Hye-jeong'),
+        ('After being kidnapped and imprisoned for fifteen years, Oh Dae-Su is released,'
+         ' only to find that he must find his captor in five days.'),
+        120,
+        2003,
+        8.4,
+    ],
+    'Joker': [
+        'Joker',
+        ('crime', 'drama', 'thriller'),
+        ('Todd Phillips', ),
+        ('Todd Phillips', 'Scott Silver', 'Bob Kane'),
+        ('Joaquin Phoenix', 'Robert De Niro', 'Zazie Beetz'),
+        ('A mentally troubled stand-up comedian embarks on a downward spiral'
+         ' that leads to the creation of an iconic villain.'),
+        122,
+        2019,
+        8.4,
+    ],
+    'Amadeus': [
+        'Amadeus',
+        ('biography', 'drama', 'music'),
+        ('Milos Forman', ),
+        ('Peter Shaffer', 'Zdenek Mahler'),
+        ('F. Murray Abraham', 'Tom Hulce', 'Elizabeth Berridge'),
+        ('The life, success and troubles of Wolfgang Amadeus Mozart, as told by Antonio Salieri,'
+         ' the contemporaneous composer who was insanely jealous of Mozart\'s talent'
+         ' and claimed to have murdered him.'),
+        160,
+        1984,
+        8.4,
+    ],
+    'Braveheart': [
+        'Braveheart',
+        ('biography', 'drama', 'history'),
+        ('Mel Gibson', ),
+        ('Randall Wallace', ),
+        ('Mel Gibson', 'Sophie Marceau', 'Patrick McGoohan'),
+        ('Scottish warrior William Wallace leads his countrymen in a rebellion'
+         ' to free his homeland from the tyranny of King Edward I of England.'),
+        178,
+        1995,
+        8.4,
+    ],
+    'Toy Story': [
+        'Toy Story',
+        ('animation', 'adventure', 'comedy'),
+        ('John Lasseter', ),
+        ('John Lasseter', 'Pete Docter', 'Andrew Stanton'),
+        ('Tom Hanks', 'Tim Allen', 'Don Rickles'),
+        ('A cowboy doll is profoundly threatened and jealous when a new spaceman figure'
+         ' supplants him as top toy in a boy\'s room.'),
+        81,
+        1995,
+        8.3,
+    ],
+    'Coco': [
+        'Coco',
+        ('animation', 'adventure', 'comedy'),
+        ('Lee Unkirch', 'Adrian Molina'),
+        ('Lee Unkirch', 'Jason Katz', 'Matthew Aldrich'),
+        ('Anthony Gonzalez', 'Gael Garcia Bernal', 'Benjamin Bratt'),
+        ('Aspiring musician Miguel, confronted with his family\'s ancestral ban on music,'
+         ' enters the Land of the Dead to find his great-great-grandfather, a legendary singer.'),
+        105,
+        2017,
+        8.4,
+    ],
+    'Das Boot': [
+        'Das Boot',
+        ('drama', 'war'),
+        ('Wolfgang Petersen', ),
+        ('Wolfgang Petersen', 'Lothar G. Buchheim'),
+        ('Jurgen Prochnow', 'Herbert Gronemeyer', 'Klaus Wennemann'),
+        'The claustrophobic world of a WWII German U-boat; boredom, filth and sheer terror.',
+        149,
+        1981,
+        8.4,
+    ],
+    'Inglourious Basterds': [
+        'Inglourious Basterds',
+        ('adventure', 'drama', 'war'),
+        ('Quentin Tarantino', ),
+        ('Quentin Tarantino',),
+        ('Brad Pitt', 'Diane Kruger', 'Eli Roth', 'Christoph Waltz'),
+        ('In Nazi-occupied France during World War II, a plan to assassinate Nazi leaders'
+         ' by a group of Jewish U.S. soldiers coincides with a theatre owner\'s vengeful plans for the same.'),
+        153,
+        2009,
+        8.3,
+    ],
+    'Princess Mononoke (Mononoke-hime)': [
+        'Princess Mononoke (Mononoke-hime)',
+        ('animation', 'adventure', 'fantasy'),
+        ('Hayao Miyazaki', ),
+        ('Hayao Miyazaki', 'Neil Gaiman'),
+        ('Yoji Matsuda', 'Yuriko Ishida', 'Yuko Tanaka'),
+        ('On a journey to find the cure for a Tatarigami\'s curse, Ashitaka finds himself'
+         ' in the middle of a war between the forest gods and Tatara, a mining colony.'
+         ' In this quest he also meets San, the Mononoke Hime.'),
+        134,
+        1997,
+        8.4,
+    ],
+    'Avengers: Endgame': [
+        'Avengers: Endgame',
+        ('action', 'adventure', 'drama'),
+        ('Anthony Russo', 'Joe Russo'),
+        ('Christopher Markus', 'Stephen McFeely', 'Stan Lee'),
+        ('Robert Downey Jr.', 'Chris Evans', 'Mark Ruffalo'),
+        ('After the devastating events of Avengers: Infinity War (2018), the universe is in ruins.'
+         ' With the help of remaining allies, the Avengers assemble once more'
+         ' in order to reverse Thanos\' actions and restore balance to the universe.'),
+        181,
+        2019,
+        8.4,
+    ],
+    'Once Upon a Time in America': [
+        'Once Upon a Time in America',
+        ('crime', 'drama'),
+        ('Sergio Leone', ),
+        ('Harry Grey', 'Leonardo Benvenuti', 'Piero De Bernardi'),
+        ('Robert De Niro', 'James Woods', 'Elizabeth McGovern'),
+        ('A former Prohibition-era Jewish gangster returns to the Lower East Side of Manhattan'
+         ' 35 years later, where he must once again confront the ghosts and regrets of his old life.'),
+        229,
+        1984,
+        8.3,
+    ],
+    'Good Will Hunting': [
+        'Good Will Hunting',
+        ('drama', 'romance'),
+        ('Gus Van Sant', ),
+        ('Matt Damon', 'Ben Affleck'),
+        ('Robin Williams', 'Matt Damon', 'Ben Affleck'),
+        ('Will Hunting, a janitor at M.I.T., has a gift for mathematics, but needs help'
+         ' from a psychologist to find direction in his life.'),
+        126,
+        1997,
+        8.3,
+    ],
+    'Requiem for a Dream': [
+        'Requiem for a Dream',
+        ('drama', ),
+        ('Darren Aronofsky', ),
+        ('Hubert Selby Jr.', 'Darren Aronofsky'),
+        ('Ellen Burstyn', 'Jared Leto', 'Jennifer Connelly'),
+        'The drug-induced utopias of four Coney Island people are shattered when their addictions run deep.',
+        102,
+        2000,
+        8.3,
+    ],
+    'Toy Story 3': [
+        'Toy Story 3',
+        ('animation', 'adventure', 'comedy'),
+        ('Lee Unkirch', ),
+        ('John Lasseter', 'Andrew Stanton', 'Lee Unkirch'),
+        ('Tom Hanks', 'Tim Allen', 'Joan Cusack'),
+        ('The toys are mistakenly delivered to a day-care center instead of the attic'
+         ' right before Andy leaves for college, and it\'s up to Woody to convince the other toys'
+         ' that they weren\'t abandoned and to return home.'),
+        103,
+        2010,
+        8.3,
+    ],
+    'Your Name (Kimi no na wa)': [
+        'Your Name (Kimi no na wa)',
+        ('animation', 'drama', 'fantasy'),
+        ('Makoto Shinkai', ),
+        ('Makoto Shinkai', 'Clark Cheng'),
+        ('Ryunosuke Kamiki', 'Mone Kamishiraishi', 'Ryo Narita'),
+        ('Two strangers find themselves linked in a bizarre way. When a connection forms,'
+         ' will distance be the only thing to keep them apart?'),
+        106,
+        2016,
+        8.4,
+    ],
+    'Singin\' in the Rain': [
+        'Singin\' in the Rain',
+        ('comedy', 'musical', 'romance'),
+        ('Stanley Donen', 'Gene Kelly'),
+        ('Betty Comden', 'Adolph Green'),
+        ('Gene Kelly', 'Donald O\'Connor', 'Debbie Reynolds'),
+        ('A silent film star falls for a chorus girl just as he and his delusionally jealous'
+         ' screen partner are trying to make the difficult transition to talking pictures in 1920s Hollywood.'),
+        103,
+        1952,
+        8.3,
+    ],
+    '3 Idiots': [
+        '3 Idiots',
+        ('comedy', 'drama'),
+        ('Rajkumar Hirani', ),
+        ('Rajkumar Hirani', 'Adhijat Joshi', 'Vidhu Vinod Chopra'),
+        ('Aamir Khan', 'Madhavan', 'Mona Singh'),
+        ('Two friends are searching for their long lost companion. They revisit their college days'
+         ' and recall the memories of their friend who inspired them to think differently,'
+         ' even as the rest of the world called them "idiots".'),
+        170,
+        2009,
+        8.4,
+    ],
+    'Star Wars: Episode VI - Return of the Jedi': [
+        'Star Wars: Episode VI - Return of the Jedi',
+        ('action', 'adventure', 'fantasy'),
+        ('Richard Marquand', ),
+        ('Lawrence Kasdan', 'George Lucas'),
+        ('Mark Hamill', 'Harrison Ford', 'Carrie Fisher'),
+        ('After a daring mission to rescue Han Solo from Jabba the Hutt, the Rebels dispatch'
+         ' to Endor to destroy the second Death Star. Meanwhile, Luke struggles to help Darth Vader'
+         ' back from the dark side without falling into the Emperor\'s trap.'),
+        131,
+        1983,
+        8.3,
+    ],
+    '2001: A Space Odyssey': [
+        '2001: A Space Odyssey',
+        ('adventure', 'sci-fi'),
+        ('Stanley Kubrick', ),
+        ('Stanley Kubrick', 'Arthur C. Clarke'),
+        ('Keir Dullea', 'Gary Lockwood', 'William Sylvester'),
+        ('After uncovering a mysterious artifact buried beneath the Lunar surface,'
+         ' a spacecraft is sent to Jupiter to find its origins - a spacecraft manned by two men'
+         ' and the supercomputer H.A.L. 9000.'),
+        149,
+        1968,
+        8.3,
+    ],
+    'Eternal Sunshine of the Spotless Mind': [
+        'Eternal Sunshine of the Spotless Mind',
+        ('drama', 'romance', 'sci-fi'),
+        ('Michel Gondry', ),
+        ('Charlie Kaufman', 'Michel Gondry', 'Pierre Bismuth'),
+        ('Jim Carrey', 'Kate Winslet', 'Tom Wilkinson'),
+        ('When their relationship turns sour, a couple undergoes a medical procedure'
+         ' to have each other erased from their memories.'),
+        108,
+        2004,
+        8.3,
+    ],
+    'Reservoir Dogs': [
+        'Reservoir Dogs',
+        ('crime', 'drama', 'thriller'),
+        ('Quentin Tarantino', ),
+        ('Quentin Tarantino', 'Roger Avary'),
+        ('Harvey Keitel', 'Tim Roth', 'Michael Madsen'),
+        ('When a simple jewelry heist goes horribly wrong, the surviving criminals begin to suspect'
+         ' that one of them is a police informant.'),
+        99,
+        1992,
+        8.3,
+    ],
+    'High and Low (Tengoku to jigoku)': [
+        'High and Low (Tengoku to jigoku)',
+        ('crime', 'drama', 'mystery'),
+        ('Akira Kurosawa', ),
+        ('Hideo Oguni', 'Ryuzo Kikushima', 'Eijiro Hisaita'),
+        ('Toshiro Mifune', 'Yutaka Sada', 'Tatsuya Nakadai'),
+        ('An executive of a Yokohama shoe company becomes a victim of extortion'
+         ' when his chauffeur\'s son is kidnapped by mistake and held for ransom.'),
+        143,
+        1963,
+        8.4,
+    ],
+    'Capharnaüm': [
+        'Capharnaüm',
+        ('drama', ),
+        ('Nadine Labaki', ),
+        ('Nadine Labaki', 'Jihad Hojeily', 'Michelle Keserwany'),
+        ('Zain Al Rafeea', 'Yordanos Shiferaw', 'Boluwatife Treasure Bankole'),
+        'While serving a five-year sentence for a violent crime, a 12-year-old boy sues his parents for neglect.',
+        126,
+        2018,
+        8.4,
+    ],
+    'Citizen Kane': [
+        'Citizen Kane',
+        ('drama', 'mystery'),
+        ('Orson Welles', ),
+        ('Herman J. Mankiewicz', 'Orson Welles', 'John Houseman'),
+        ('Orson Welles', 'Joseph Cotten', 'Dorothy Comingore'),
+        ('Following the death of publishing tycoon Charles Foster Kane,'
+         ' reporters scramble to uncover the meaning of his final utterance: "Rosebud."'),
+        119,
+        1941,
+        8.3,
+    ],
+    'Lawrence of Arabia': [
+        'Lawrence of Arabia',
+        ('adventure', 'biography', 'drama'),
+        ('David Lean', ),
+        ('Robert Bolt', 'Michael Wilson'),
+        ('Peter O\'Toole', 'Alec Guinness', 'Anthony Quinn'),
+        ('The story of T.E. Lawrence, the English officer who successfully united and led'
+         ' the diverse, often warring, Arab tribes during World War I in order to fight the Turks.'),
+        218,
+        1962,
+        8.3,
+    ],
+    'The Hunt (Jagten)': [
+        'The Hunt (Jagten)',
+        ('drama', ),
+        ('Thomas Vinterberg', ),
+        ('Tobias Lindholm', 'Thomas Vinterberg'),
+        ('Mads Mikkelsen', 'Thomas Bo Larsen', 'Annika Wedderkopp'),
+        ('A teacher lives a lonely life, all the while struggling over his son\'s custody.'
+         ' His life slowly gets better as he finds love and receives good news from his son,'
+         ' but his new luck is about to be brutally shattered by an innocent little lie.'),
+        115,
+        2012,
+        8.3,
+    ],
+    'North by Northwest': [
+        'North by Northwest',
+        ('action', 'adventure', 'mystery'),
+        ('Alfred Hitchcock', ),
+        ('Ernest Lehman', ),
+        ('Cary Grant', 'Eva Marie Saint', 'James Mason'),
+        ('A New York City advertising executive goes on the run after being mistaken for a government agent'
+         ' by a group of foreign spies, and falls for a woman whose loyalties he begins to doubt.'),
+        136,
+        1959,
+        8.3,
+    ],
+    'M - A City Looking for a Murderer (M - Eine Stadt sucht einen Mörder)': [
+        'M - A City Looking for a Murderer (M - Eine Stadt sucht einen Mörder)',
+        ('crime', 'mystery', 'thriller'),
+        ('Fritz Lang', ),
+        ('Thea von Harbou', 'Fritz Lang', 'Egon Jacobsohn'),
+        ('Peter Lorre', 'Ellen Widmann', 'Inge Landgut'),
+        ('When the police in a German city are unable to catch a child-murderer,'
+         ' other criminals join in the manhunt.'),
+        117,
+        1931,
+        8.3,
+    ],
+    'Vertigo': [
+        'Vertigo',
+        ('mystery', 'romance', 'thriller'),
+        ('Alfred Hitchcock', ),
+        ('Alec Coppel', 'Samuel A. Taylor', 'Pierre Boileau'),
+        ('James Stewart', 'Kim Novak', 'Barbara Bel Geddes'),
+        ('A former San Francisco police detective juggles wrestling with his personal demons'
+         ' and becoming obsessed with the hauntingly beautiful woman he has been hired to trail,'
+         ' who may be deeply disturbed.'),
+        128,
+        1958,
+        8.3,
+    ],
+    'Amelie (Le fabuleux destin d\'Amélie Poulain)': [
+        'Amelie (Le fabuleux destin d\'Amélie Poulain)',
+        ('comedy', 'romance'),
+        ('Jean-Pierre Jeunet', ),
+        ('Guillaume Laurant', 'Jean-Pierre Jeunet'),
+        ('Audrey Tautou', 'Mathieu Kassovitz', 'Rufus'),
+        ('Amélie is an innocent and naive girl in Paris with her own sense of justice.'
+         ' She decides to help those around her and, along the way, discovers love.'),
+        122,
+        2011,
+        8.3,
     ],
 }

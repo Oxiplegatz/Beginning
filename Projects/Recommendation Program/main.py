@@ -1,7 +1,7 @@
 from movieclass import Movie
-from movies_dict import movies_database
-from calculations import calculate_similarity
-from graph import *
+from graph import Graph
+from calculations import get_common_attributes
+from builders import movies, movies_graph
 
 AFFIRMATIVE = ['y', 'ye', 'yes', 'yeah']
 UNSUCCESSFUL = 'I am sorry I could not help you. Good luck!'
@@ -10,16 +10,6 @@ UNSUCCESSFUL = 'I am sorry I could not help you. Good luck!'
 def welcome() -> None:
     """A function that prints the opening message."""
     print('Welcome to "Movie Advice"! This program can recommend a movie based on the movies you like.')
-
-
-def create_info_dict(movies_dict: dict) -> dict:
-    """Creates an information list of all movies as Movie objects."""
-    all_movies = {}
-
-    for movie in movies_dict:
-        movie_to_add = Movie(*movies_dict[movie])
-        all_movies[movie] = movie_to_add
-    return all_movies
 
 
 def get_movie_info(movie: Movie) -> None:
@@ -32,7 +22,7 @@ def choose_movie(movies_list: dict[str: Movie]) -> None:
     """Receives user input, finds all corresponding movies in the database and lets user choose one."""
     chosen_movies = []
     user_input = input('Please select a movie. Start typing a title and press Enter to see if a movie you think of'
-                       ' is in the database:\n')
+                       ' is in the database:\n').lower()
 
     for movie in movies_list:
         if movie.title.lower().startswith(user_input) or movie.title.lower().startswith(f'the {user_input}'):
@@ -46,7 +36,7 @@ def choose_movie(movies_list: dict[str: Movie]) -> None:
         else:
             repeat_choice = input('I am sorry to hear that. Would you like to try and look for more movies? y/n\n')
             if repeat_choice in AFFIRMATIVE:
-                choose_movie(movies.values())
+                return choose_movie(movies.values())
             else:
                 print(UNSUCCESSFUL)
                 return
@@ -84,7 +74,7 @@ def choose_movie(movies_list: dict[str: Movie]) -> None:
 
 
 def find_similar(movie_of_choice: Movie, graph: Graph) -> None:
-    """Finds all movies similar to a given movie."""
+    """Finds all movies similar to a given movie using a pre-built graph."""
     movie_title = movie_of_choice.title
     similar_movies = graph.graph_dict[movie_title].get_edges()
     if similar_movies:
@@ -95,56 +85,25 @@ def find_similar(movie_of_choice: Movie, graph: Graph) -> None:
         result_dict = {}
 
         for movie in similar_movies:
-            similarity_factor = graph.graph_dict[movie_title].get_edge_weight(movie)
-            result_dict[movie] = similarity_factor
+            similarity_score = graph.graph_dict[movie_title].get_edge_weight(movie)
+            result_dict[movie] = similarity_score
         result_dict_sorted = sorted(result_dict.items(), key=lambda x: x[1], reverse=True)
 
-        # As a result the function prints out top 3 movies with the highest similarity factor
-        for movie, similarity_factor in result_dict_sorted[:3]:
+        # As a result the function prints out top 3 movies with the highest similarity score,
+        # along with all their common attributes
+        for movie, similarity_score in result_dict_sorted[:3]:
             print('─' * 10)
-            print(f'{movie}\nSimilarity factor: {similarity_factor} out of 10.0\n')
+            print(f'{movie}\nSimilarity score: {similarity_score} out of 10.0\n')
             get_movie_info(movies[movie])
+            print(get_common_attributes(movies[movie], movie_of_choice))
         return
 
     user_input = input(f'Your movie of choice is {movie_title}. Unfortunately, there are no similar movies'
                        f' in the database. Would you like to try a new search? y/n\n')
     if user_input in AFFIRMATIVE:
-        choose_movie(movies.values())
+        return choose_movie(movies.values())
     else:
         print(UNSUCCESSFUL)
-
-
-def get_similarity_dict(chosen_movie: Movie) -> dict:
-    """Creates a dictionary of all movies similar to a given movie with their respective similarity factors."""
-    similar_movies = {}
-
-    for movie in movies.values():
-        if chosen_movie != movie:
-            similarity_factor = calculate_similarity(chosen_movie, movie)
-            # If similarity factor is 1 or less, the function disregards similarity as minor
-            if similarity_factor > 1.0:
-                similar_movies[movie.title] = similarity_factor
-
-    return similar_movies
-
-
-def build_graph(movies_list: dict.values) -> Graph:
-    """Creates a graph from a given list of Movie objects."""
-    graph = Graph()
-
-    for movie in movies_list:
-        vertex = Vertex(movie.title)
-        edges_base = get_similarity_dict(movie)
-        for key, value in edges_base.items():
-            vertex.add_edge(key, value)
-        graph.add_vertex(vertex)
-
-    return graph
-
-
-movies = create_info_dict(movies_database)
-movies_graph = build_graph(movies.values())
-formatted_graph = get_formatted_graph(movies_graph)
 
 
 def main():
