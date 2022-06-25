@@ -8,7 +8,7 @@ def calculate_similarity(movie_one: Movie, movie_two: Movie) -> float:
     for movie_one_director in movie_one.director:
         if movie_one_director in movie_two.director:
             # The common director contributes to similarity more than other factors
-            similarity_score += 2
+            similarity_score += 2.0
 
     for movie_one_genre in movie_one.genre:
         # The common genre has the least weight among all factors
@@ -17,11 +17,11 @@ def calculate_similarity(movie_one: Movie, movie_two: Movie) -> float:
 
     for movie_one_writer in movie_one.writer:
         if movie_one_writer in movie_two.writer:
-            similarity_score += 1
+            similarity_score += 1.0
 
     for movie_one_actor in movie_one.cast:
         if movie_one_actor in movie_two.cast:
-            similarity_score += 1
+            similarity_score += 1.0
 
     return similarity_score
 
